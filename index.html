@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bar Locale1 — Caffetteria &amp; Aperitivo</title>
+<meta name="description" content="Bar Locale1: caffetteria, colazioni, aperitivi e cocktail nel cuore della città.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <nav class="navbar">
+    <a href="#top" class="brand">Bar <span>Locale1</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri il menu di navigazione" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Chi siamo</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Galleria</a></li>
+      <li><a href="#info">Orari</a></li>
+      <li><a href="#contact" class="nav-cta">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Dal 1998 · Caffetteria di quartiere</p>
+      <h1>Il tuo momento di pausa, ogni giorno.</h1>
+      <p class="hero-sub">Caffè di qualità, colazioni dolci e salate, aperitivi con vista sulla piazza. Bar Locale1 è il posto dove il tempo rallenta.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Scopri il menu</a>
+        <a href="#contact" class="btn btn-ghost">Prenota un tavolo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="I numeri di Bar Locale1">
+    <div class="stat"><strong>25+</strong><span>anni di storia</span></div>
+    <div class="stat"><strong>40</strong><span>miscele di caffè</span></div>
+    <div class="stat"><strong>7/7</strong><span>giorni aperti</span></div>
+    <div class="stat"><strong>4.8★</strong><span>media recensioni</span></div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-text">
+      <p class="section-eyebrow">Chi siamo</p>
+      <h2>Un angolo di calore nel centro città</h2>
+      <p>Bar Locale1 nasce dalla passione per il buon caffè e per l'ospitalità genuina. Ogni mattina tostiamo l'atmosfera giusta per iniziare la giornata: cornetti caldi, caffè in miscela d'autore e un sorriso al bancone. Nel pomeriggio l'atmosfera cambia registro, tra aperitivi curati e musica soft, fino a sera.</p>
+      <ul class="about-points">
+        <li>Materie prime locali e di stagione</li>
+        <li>Torrefazione artigianale selezionata</li>
+        <li>Spazio accogliente per lavorare o incontrarsi</li>
+      </ul>
+    </div>
+    <div class="about-card" aria-hidden="true">
+      <div class="about-card-glow"></div>
+      <span class="about-card-icon">☕</span>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <p class="section-eyebrow center">Il Menu</p>
+    <h2 class="center">Qualcosa per ogni momento della giornata</h2>
+
+    <div class="menu-tabs" role="tablist" aria-label="Categorie menu">
+      <button class="tab-btn active" data-tab="colazione" role="tab" aria-selected="true">Colazione</button>
+      <button class="tab-btn" data-tab="caffetteria" role="tab" aria-selected="false">Caffetteria</button>
+      <button class="tab-btn" data-tab="aperitivo" role="tab" aria-selected="false">Aperitivo</button>
+    </div>
+
+    <div class="menu-panel" data-panel="colazione">
+      <div class="menu-item"><div class="menu-item-head"><h3>Cornetto &amp; Cappuccino</h3><span>€ 3,50</span></div><p>Cornetto artigianale a scelta con cappuccino cremoso.</p></div>
+      <div class="menu-item"><div class="menu-item-head"><h3>Toast Avocado</h3><span>€ 5,00</span></div><p>Pane in cassa, avocado, pomodorini e semi di sesamo.</p></div>
+      <div class="menu-item"><div class="menu-item-head"><h3>Yogurt &amp; Granola</h3><span>€ 4,50</span></div><p>Yogurt greco, granola fatta in casa, frutti di bosco e miele.</p></div>
+    </div>
+
+    <div class="menu-panel" data-panel="caffetteria" hidden>
+      <div class="menu-item"><div class="menu-item-head"><h3>Espresso</h3><span>€ 1,20</span></div><p>La nostra miscela signature, corposa e vellutata.</p></div>
+      <div class="menu-item"><div class="menu-item-head"><h3>Flat White</h3><span>€ 3,00</span></div><p>Doppio espresso con latte microschiumato.</p></div>
+      <div class="menu-item"><div class="menu-item-head"><h3>Cioccolata Calda</h3><span>€ 3,80</span></div><p>Cioccolato fondente 70%, panna montata a parte.</p></div>
+    </div>
+
+    <div class="menu-panel" data-panel="aperitivo" hidden>
+      <div class="menu-item"><div class="menu-item-head"><h3>Spritz Locale1</h3><span>€ 6,00</span></div><p>La nostra rivisitazione con bitter artigianale e scorza d'arancia.</p></div>
+      <div class="menu-item"><div class="menu-item-head"><h3>Negroni</h3><span>€ 7,50</span></div><p>Gin, vermouth rosso e bitter, guarnito con arancia.</p></div>
+      <div class="menu-item"><div class="menu-item-head"><h3>Tagliere Misto</h3><span>€ 9,00</span></div><p>Salumi e formaggi locali, taralli e composta di fichi.</p></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <p class="section-eyebrow center">Galleria</p>
+    <h2 class="center">Un assaggio dell'atmosfera</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item g1"><span>Bancone</span></div>
+      <div class="gallery-item g2"><span>Aperitivo</span></div>
+      <div class="gallery-item g3"><span>Colazione</span></div>
+      <div class="gallery-item g4"><span>Dehors</span></div>
+      <div class="gallery-item g5"><span>Latte Art</span></div>
+      <div class="gallery-item g6"><span>Serata</span></div>
+    </div>
+  </section>
+
+  <section id="info" class="info">
+    <div class="info-card">
+      <h3>Orari di apertura</h3>
+      <ul class="hours-list">
+        <li><span>Lun – Ven</span><span>7:00 – 21:00</span></li>
+        <li><span>Sabato</span><span>8:00 – 23:00</span></li>
+        <li><span>Domenica</span><span>8:00 – 13:00</span></li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>Dove siamo</h3>
+      <p>Piazza della Repubblica, 12<br>00100 Città (RM)</p>
+      <p>A due passi dalla fermata del tram, parcheggio disponibile in piazza.</p>
+    </div>
+    <div class="info-card">
+      <h3>Contatti rapidi</h3>
+      <p>📞 +39 06 1234 5678<br>✉️ info@barlocale1.it</p>
+      <p>Seguici sui social per le novità del giorno.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+      <p class="section-eyebrow">Prenota</p>
+      <h2>Fissa il tuo tavolo o mandaci un messaggio</h2>
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <label>
+            Nome
+            <input type="text" name="nome" placeholder="Il tuo nome" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="tuo@email.it" required>
+          </label>
+        </div>
+        <label>
+          Messaggio
+          <textarea name="messaggio" rows="4" placeholder="Data, orario e numero di persone" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Invia richiesta</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Bar Locale1 — Sito dimostrativo creato a scopo di test.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
