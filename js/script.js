@@ -38,11 +38,13 @@ tabButtons.forEach((btn) => {
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  formNote.textContent = 'Grazie! La tua richiesta è stata inviata (sito dimostrativo, nessun dato viene realmente trasmesso).';
-  form.reset();
-});
+if (form) {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    formNote.textContent = 'Grazie! La tua richiesta è stata inviata (sito dimostrativo, nessun dato viene realmente trasmesso).';
+    form.reset();
+  });
+}
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

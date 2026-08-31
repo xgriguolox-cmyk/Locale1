@@ -44,6 +44,7 @@
   padding: 56px 10px 76px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
 }
 .drinks-row::-webkit-scrollbar { display: none; }
 
@@ -151,4 +152,13 @@
 
 @media (max-width: 640px) {
   .drink-card { flex-basis: 190px; }
+}
+
+/* Touch devices have no hover state: show the recipe without it */
+@media (hover: none) {
+  .drink-card-overlay p {
+    max-height: 160px;
+    opacity: 1;
+    margin-top: 8px;
+  }
 }
