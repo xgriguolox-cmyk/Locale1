@@ -426,6 +426,47 @@ section { padding: 88px 0; }
 
 .gallery-note { margin-top: 20px; font-size: 0.85rem; color: #7a5a44; font-style: italic; }
 
+/* ---------- Feedback ---------- */
+
+.feedback { background: #fdf6ea; }
+.feedback-h2 { margin-bottom: 36px; max-width: 22ch; font-size: clamp(1.9rem, 4vw, 2.5rem); }
+
+.feedback-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+.feedback-stat strong {
+  display: block;
+  font-family: "Marcellus", serif;
+  font-size: 2.4rem;
+  color: var(--bordeaux);
+  line-height: 1;
+}
+.feedback-stat strong span { font-size: 1.2rem; color: var(--gold); }
+.feedback-stat > span { font-size: 0.85rem; color: #4a2f22; }
+
+.feedback-quote {
+  margin: 0;
+  padding: 30px 34px;
+  background: #fff;
+  border-left: 4px solid var(--gold);
+  max-width: 68ch;
+}
+.feedback-quote p {
+  margin: 0 0 14px;
+  font-family: "Marcellus", serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.feedback-quote footer { font-size: 0.85rem; color: var(--turquoise-dark); font-weight: 600; }
+.feedback-translated { color: #7a5a44; font-weight: 400; font-style: italic; }
+
+.feedback-cta { margin-top: 26px; font-size: 0.92rem; color: #4a2f22; }
+.feedback-cta a { color: var(--turquoise-dark); font-weight: 600; }
+
 /* ---------- Reservations ---------- */
 
 .reservations { background: #fdf6ea; }
