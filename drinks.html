@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Drink di Bar Locale1</title>
+<meta name="description" content="I cinque drink firmati Bar Locale1: Negroni, Spritz Locale1, Americano, Old Fashioned e Bellini, in una vetrina scorrevole in stile Netflix.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/drinks.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <nav class="navbar">
+    <a href="index.html#top" class="brand"><span class="brand-dot" aria-hidden="true"></span>Bar Locale1</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri il menu di navigazione" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">Chi siamo</a></li>
+      <li><a href="index.html#menu">Menu</a></li>
+      <li><a href="drinks.html" aria-current="page">Drink</a></li>
+      <li><a href="index.html#gallery">Galleria</a></li>
+      <li><a href="index.html#info">Orari</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Prenota</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="drinks-hero">
+    <div class="wrap">
+      <p class="eyebrow">I nostri drink</p>
+      <h1>Cinque drink, un solo bancone</h1>
+      <p class="drinks-hero-sub">La selezione firmata Bar Locale1 per l'ora dell'aperitivo. Passa il mouse (o il dito) su ogni bicchiere per scoprirne la ricetta.</p>
+    </div>
+  </section>
+
+  <section class="drinks-showcase">
+    <div class="wrap drinks-row-wrap">
+      <button class="row-arrow row-arrow-left" id="rowLeft" aria-label="Scorri a sinistra" type="button">‹</button>
+
+      <div class="drinks-row" id="drinksRow">
+
+        <article class="drink-card tilt drink-card-bg-a" data-tilt-scale="1.16" data-tilt-max="10" tabindex="0">
+          <svg class="drink-art" viewBox="0 0 300 400" aria-hidden="true">
+            <line class="counter-line" x1="20" y1="330" x2="280" y2="330" />
+            <path class="glass-outline" d="M110,170 L190,170 L175,300 L125,300 Z" />
+            <path class="liquid-campari" d="M116,212 L184,212 L175,300 L125,300 Z" />
+            <rect class="ice" x="138" y="222" width="28" height="28" transform="rotate(12 152 236)" />
+            <path class="peel" d="M196,148 C 212,158 206,180 190,178" />
+          </svg>
+          <div class="drink-card-overlay">
+            <span class="drink-index">01</span>
+            <h3>Negroni</h3>
+            <p>Gin, vermouth rosso e bitter Campari in parti uguali, guarnito con scorza d'arancia. Amaro, deciso, senza tempo.</p>
+          </div>
+        </article>
+
+        <article class="drink-card tilt drink-card-bg-b" data-tilt-scale="1.16" data-tilt-max="10" tabindex="0">
+          <svg class="drink-art" viewBox="0 0 300 400" aria-hidden="true">
+            <line class="counter-line" x1="20" y1="330" x2="280" y2="330" />
+            <path class="glass-outline" d="M100,150 C100,210 130,240 150,240 C170,240 200,210 200,150 Z" />
+            <path class="liquid-senape" d="M108,178 C113,206 130,228 150,228 C170,228 187,206 192,178 Z" />
+            <circle class="bubble" cx="135" cy="200" r="3" />
+            <circle class="bubble" cx="160" cy="210" r="2.5" />
+            <circle class="bubble" cx="148" cy="190" r="2" />
+            <rect class="glass-outline" x="147" y="240" width="6" height="58" />
+            <ellipse class="glass-outline" cx="150" cy="303" rx="34" ry="7" />
+            <circle class="orange-wheel" cx="150" cy="140" r="17" />
+            <path class="orange-wheel-slice" d="M150,140 L150,124 A16,16 0 0 1 164,148 Z" />
+          </svg>
+          <div class="drink-card-overlay">
+            <span class="drink-index">02</span>
+            <h3>Spritz Locale1</h3>
+            <p>Prosecco, bitter artigianale e soda, guarnito con scorza d'arancia. La nostra rivisitazione, meno dolce e più profumata.</p>
+          </div>
+        </article>
+
+        <article class="drink-card tilt drink-card-bg-a" data-tilt-scale="1.16" data-tilt-max="10" tabindex="0">
+          <svg class="drink-art" viewBox="0 0 300 400" aria-hidden="true">
+            <line class="counter-line" x1="20" y1="330" x2="280" y2="330" />
+            <path class="glass-outline" d="M120,140 L180,140 L172,300 L128,300 Z" />
+            <path class="liquid-campari" d="M124,178 L176,178 L172,300 L128,300 Z" />
+            <circle class="bubble" cx="140" cy="220" r="2.5" />
+            <circle class="bubble" cx="158" cy="250" r="2" />
+            <circle class="bubble" cx="146" cy="270" r="2.5" />
+            <path class="orange-wheel" d="M150,140 m-16,0 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+            <path class="orange-wheel-slice" d="M150,140 L150,124 A16,16 0 0 1 166,140 Z" />
+            <rect class="straw" x="163" y="90" width="6" height="140" transform="rotate(8 166 160)" />
+          </svg>
+          <div class="drink-card-overlay">
+            <span class="drink-index">03</span>
+            <h3>Americano</h3>
+            <p>Campari, vermouth rosso e soda su ghiaccio, con una fetta d'arancia. Il progenitore del Negroni: leggero e rinfrescante.</p>
+          </div>
+        </article>
+
+        <article class="drink-card tilt drink-card-bg-b" data-tilt-scale="1.16" data-tilt-max="10" tabindex="0">
+          <svg class="drink-art" viewBox="0 0 300 400" aria-hidden="true">
+            <line class="counter-line" x1="20" y1="330" x2="280" y2="330" />
+            <path class="glass-outline" d="M105,190 L195,190 L180,300 L120,300 Z" />
+            <path class="liquid-ambra" d="M112,226 L188,226 L180,300 L120,300 Z" />
+            <rect class="ice" x="127" y="236" width="46" height="46" transform="rotate(-8 150 259)" />
+            <path class="peel" d="M112,178 C 96,168 100,148 116,146" />
+          </svg>
+          <div class="drink-card-overlay">
+            <span class="drink-index">04</span>
+            <h3>Old Fashioned</h3>
+            <p>Bourbon, zucchero e Angostura bitter, scorza d'arancia. Robusto e avvolgente, per chi ama i distillati senza compromessi.</p>
+          </div>
+        </article>
+
+        <article class="drink-card tilt drink-card-bg-a" data-tilt-scale="1.16" data-tilt-max="10" tabindex="0">
+          <svg class="drink-art" viewBox="0 0 300 400" aria-hidden="true">
+            <line class="counter-line" x1="20" y1="330" x2="280" y2="330" />
+            <path class="glass-outline" d="M130,140 L170,140 L156,250 L144,250 Z" />
+            <path class="liquid-pesca" d="M134,166 L166,166 L156,250 L144,250 Z" />
+            <circle class="bubble" cx="150" cy="190" r="2.5" />
+            <circle class="bubble" cx="153" cy="215" r="2" />
+            <circle class="bubble" cx="148" cy="235" r="2.5" />
+            <rect class="glass-outline" x="147" y="250" width="6" height="52" />
+            <ellipse class="glass-outline" cx="150" cy="306" rx="30" ry="7" />
+          </svg>
+          <div class="drink-card-overlay">
+            <span class="drink-index">05</span>
+            <h3>Bellini</h3>
+            <p>Prosecco e purea di pesca bianca. Dolce e delicato, nato a Venezia: perfetto per aprire la serata.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="row-arrow row-arrow-right" id="rowRight" aria-label="Scorri a destra" type="button">›</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">© <span id="year"></span> Bar Locale1 — Sito dimostrativo creato a scopo di test.</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
