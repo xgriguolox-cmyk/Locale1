@@ -117,8 +117,11 @@ img { max-width: 100%; }
   color: var(--panna) !important;
   padding: 8px 16px;
   border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--campari);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.12s ease;
 }
-.nav-cta:hover { background: var(--campari); border-color: var(--campari); }
+.nav-cta:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--campari); background: var(--campari); border-color: var(--campari); }
+.nav-cta:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--campari); }
 
 .nav-toggle {
   display: none;
@@ -211,9 +214,11 @@ img { max-width: 100%; }
   border: 2px solid currentColor;
   cursor: pointer;
   background: none;
-  transition: transform 0.12s ease, background 0.12s ease, color 0.12s ease;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.12s ease, color 0.12s ease;
 }
-.btn:hover { transform: translate(-2px, -2px); }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--ink); }
 
 .btn-solid { background: var(--senape); color: var(--ink); border-color: var(--senape); }
 .btn-solid:hover { background: var(--panna); border-color: var(--panna); }
@@ -429,9 +434,10 @@ section { padding: 90px 0; }
   align-items: flex-end;
   padding: 16px;
   color: var(--panna);
-  transition: transform 0.15s ease;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+  will-change: transform;
 }
-.gallery-item:hover { transform: rotate(0deg) translateY(-4px); }
+.gallery-item.tilt:hover { box-shadow: 0 20px 34px rgba(28,26,23,0.4); }
 
 .gallery-item::before {
   content: "";
@@ -470,7 +476,10 @@ section { padding: 90px 0; }
   border: 2px solid var(--ink);
   padding: 26px 24px;
   position: relative;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+  will-change: transform;
 }
+.info-card.tilt:hover { box-shadow: 0 20px 34px rgba(28,26,23,0.22); }
 .info-card::before {
   content: "";
   position: absolute;
