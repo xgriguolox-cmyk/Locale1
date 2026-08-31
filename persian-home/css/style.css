@@ -329,6 +329,14 @@ section { padding: 88px 0; }
 .menu-photo-double img { aspect-ratio: 1/1; width: 50%; border-bottom: 3px solid var(--gold); }
 .menu-photo-double img:first-child { border-right: 1px solid var(--turquoise-dark); }
 
+.menu-photo-item-noimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid var(--gold);
+}
+.menu-photo-item-noimg .menu-photo-text { text-align: center; padding: 34px 20px; }
+
 .menu-photo-text { padding: 16px 18px 20px; }
 .menu-photo-text h3 {
   font-family: "Marcellus", serif;

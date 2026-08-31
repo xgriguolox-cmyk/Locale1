@@ -87,6 +87,9 @@
       <div class="menu-tabs" role="tablist" aria-label="Categorie menu">
         <button class="tab-btn active" data-tab="antipasti" role="tab" aria-selected="true">Antipasti</button>
         <button class="tab-btn" data-tab="principali" role="tab" aria-selected="false">Piatto Unico</button>
+        <button class="tab-btn" data-tab="insalate" role="tab" aria-selected="false">Insalate</button>
+        <button class="tab-btn" data-tab="vegetariano" role="tab" aria-selected="false">Vegetariano</button>
+        <button class="tab-btn" data-tab="dolci" role="tab" aria-selected="false">Dolci</button>
       </div>
 
       <div class="menu-panel menu-photo-grid" data-panel="antipasti">
@@ -95,24 +98,28 @@
           <div class="menu-photo-text"><h3>Involtini di Melanzane</h3><p>Melanzane, noci, cacio e pepe, menta, con pane tipico.</p></div>
         </div>
         <div class="menu-photo-item">
+          <img src="assets/dolmeh.jpg" alt="Dolmeh" loading="lazy">
+          <div class="menu-photo-text"><h3>Dolmeh</h3><p>Foglia d'uva, carne macinata, riso, erbe aromatiche, cotiledone e cipolla.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/kashko-bademjan.jpg" alt="Kashko Bademjan" loading="lazy">
+          <div class="menu-photo-text"><h3>Kashko Bademjan</h3><p>Melanzane, cipolla, noci, menta, cacio e pepe.</p></div>
+        </div>
+        <div class="menu-photo-item">
           <img src="assets/mirza-ghasemi.jpg" alt="Mirza Ghasemi" loading="lazy">
           <div class="menu-photo-text"><h3>Mirza Ghasemi</h3><p>Melanzane, uova, pomodori e aglio.</p></div>
         </div>
         <div class="menu-photo-item">
           <img src="assets/cucu-sabzi.jpg" alt="Cucu Sabzi" loading="lazy">
-          <div class="menu-photo-text"><h3>Cucu Sabzi</h3><p>Uova, prezzemolo, erba cipollina, coriandolo, semi di crispino e noci.</p></div>
-        </div>
-        <div class="menu-photo-item">
-          <img src="assets/insalata.jpg" alt="Insalata mista" loading="lazy">
-          <div class="menu-photo-text"><h3>Insalata</h3><p>Insalata mista di stagione con salsa speciale della casa.</p></div>
+          <div class="menu-photo-text"><h3>Cucu Sabzi</h3><p>Uova, farina, prezzemolo, aglio, erba cipollina e coriandolo.</p></div>
         </div>
         <div class="menu-photo-item">
           <img src="assets/zuppa-orzo.jpg" alt="Zuppa di orzo" loading="lazy">
-          <div class="menu-photo-text"><h3>Zuppa di Orzo <span class="menu-season">inverno</span></h3><p>Orzo, carote, cipolla, funghi e latte.</p></div>
+          <div class="menu-photo-text"><h3>Zuppa di Orzo <span class="menu-season">inverno</span></h3><p>Orzo, erba cipollina, carote, cipolla, funghi, latte e panna.</p></div>
         </div>
         <div class="menu-photo-item">
-          <img src="assets/mosto-khiar.jpg" alt="Mosto Khiar" loading="lazy">
-          <div class="menu-photo-text"><h3>Mosto Khiar <span class="menu-season">estate</span></h3><p>Yogurt con cetrioli, noci, cipolla e menta.</p></div>
+          <img src="assets/mosto-khiar.jpg" alt="Mostokhiar" loading="lazy">
+          <div class="menu-photo-text"><h3>Mostokhiar <span class="menu-season">estate</span></h3><p>Yogurt con cetrioli, cipolla, menta e noci.</p></div>
         </div>
       </div>
 
@@ -141,6 +148,22 @@
           <img src="assets/cholo-berenj.jpg" alt="Cholo Berenj" loading="lazy">
           <div class="menu-photo-text"><h3>Cholo Berenj</h3><p>Riso basmati allo zafferano, semi di crispino e carne di vitello.</p></div>
         </div>
+        <div class="menu-photo-item">
+          <img src="assets/riso-con-pollo.jpg" alt="Riso con pollo" loading="lazy">
+          <div class="menu-photo-text"><h3>Riso con Pollo</h3><p>Riso basmati allo zafferano e coscia di pollo.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/cholo-gusht.jpg" alt="Cholo Gusht" loading="lazy">
+          <div class="menu-photo-text"><h3>Cholo Gusht</h3><p>Riso basmati allo zafferano e carne di vitello.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/sabzi-polo-pesce.jpg" alt="Sabzi Polo con pesce" loading="lazy">
+          <div class="menu-photo-text"><h3>Sabzi Polo con Pesce</h3><p>Riso alle erbe con zafferano, prezzemolo, fieno greco, aglio e filetto di pesce.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/cholo-mahi.jpg" alt="Cholo Mahi" loading="lazy">
+          <div class="menu-photo-text"><h3>Cholo Mahi</h3><p>Riso basmati allo zafferano e filetto di pesce.</p></div>
+        </div>
         <div class="menu-photo-item menu-photo-item-double">
           <div class="menu-photo-double">
             <img src="assets/baghali-agnello.jpg" alt="Baghali Polo con agnello" loading="lazy">
@@ -150,9 +173,68 @@
         </div>
       </div>
 
+      <div class="menu-panel menu-photo-grid" data-panel="insalate" hidden>
+        <div class="menu-photo-item">
+          <img src="assets/insalata-stagione.jpg" alt="Insalata di stagione" loading="lazy">
+          <div class="menu-photo-text"><h3>Insalata di Stagione</h3><p>Insalata di stagione accompagnata da salsa speciale della casa.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/insalata-olvieh.jpg" alt="Insalata Olvieh" loading="lazy">
+          <div class="menu-photo-text"><h3>Insalata Olvieh</h3><p>Carote, patate, mais, piselli, cetriolini, uova e maionese.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/insalata-cappuccio.jpg" alt="Insalata di cappuccio" loading="lazy">
+          <div class="menu-photo-text"><h3>Insalata di Cappuccio</h3><p>Cappuccio bianco, cetriolini, melograno e salsa speciale.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/insalata-shirazi.jpg" alt="Insalata Shirazi" loading="lazy">
+          <div class="menu-photo-text"><h3>Insalata Shirazi</h3><p>Cetrioli, cipolla, pomodori e succo di lime.</p></div>
+        </div>
+      </div>
+
+      <div class="menu-panel menu-photo-grid" data-panel="vegetariano" hidden>
+        <div class="menu-photo-item">
+          <img src="assets/veg-lubia-polo.jpg" alt="Lubia Polo" loading="lazy">
+          <div class="menu-photo-text"><h3>Lubia Polo</h3><p>Riso, zafferano, fagiolini, soja, cipolla e salsa di pomodori.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/veg-adas-polo.jpg" alt="Adas Polo" loading="lazy">
+          <div class="menu-photo-text"><h3>Adas Polo</h3><p>Riso, zafferano, lenticchie, uvetta, pistacchi e mandorle.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/veg-gheimeh.jpg" alt="Gheimeh vegetariano" loading="lazy">
+          <div class="menu-photo-text"><h3>Gheimeh <span class="menu-season">veg</span></h3><p>Riso, zafferano, lime, cotiledone, melanzane e pomodori.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/veg-fessenjan.jpg" alt="Fessenjan vegetariano" loading="lazy">
+          <div class="menu-photo-text"><h3>Fessenjan <span class="menu-season">veg</span></h3><p>Riso, zafferano, noci, concentrato di melograno e melanzane.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/veg-baghali-polo.jpg" alt="Baghali Polo vegetariano" loading="lazy">
+          <div class="menu-photo-text"><h3>Baghali Polo <span class="menu-season">veg</span></h3><p>Riso, zafferano, fave, aneto e soja.</p></div>
+        </div>
+      </div>
+
+      <div class="menu-panel menu-photo-grid" data-panel="dolci" hidden>
+        <div class="menu-photo-item">
+          <img src="assets/sholezard.jpg" alt="Sholezard" loading="lazy">
+          <div class="menu-photo-text"><h3>Sholezard</h3><p>Budino di riso, burro, zafferano, acqua di rosa, cardamomo, mandorle e pistacchio.</p></div>
+        </div>
+        <div class="menu-photo-item">
+          <img src="assets/dolcetti-persiani.jpg" alt="Dolcetti persiani" loading="lazy">
+          <div class="menu-photo-text"><h3>Dolcetti Persiani</h3><p>I dolcetti tradizionali fatti in casa, appena sfornati.</p></div>
+        </div>
+        <div class="menu-photo-item menu-photo-item-noimg">
+          <div class="menu-photo-text"><h3>Torta della Casa</h3><p>Una porzione di torta alle noci, alle carote oppure al cacao.</p></div>
+        </div>
+        <div class="menu-photo-item menu-photo-item-noimg">
+          <div class="menu-photo-text"><h3>Cheesecake</h3><p>Una porzione di cheesecake al limone, cioccolata, fragole oppure melograno.</p></div>
+        </div>
+      </div>
+
       <div class="menu-dessert-note">
-        <h3>Per finire</h3>
-        <p>Dolcetti tipici artigianali, accompagnati da tè caldo (menu invernale) o sharbat, la bevanda fresca e dolce della tradizione (menu estivo). Disponibili anche acqua naturale e frizzante e bevande in lattina.</p>
+        <h3>Con il menu fisso</h3>
+        <p>Il menu fisso include sempre dolcetti tipici artigianali, accompagnati da tè caldo (menu invernale) o sharbat, la bevanda fresca e dolce della tradizione (menu estivo). Disponibili anche acqua naturale e frizzante e bevande in lattina.</p>
       </div>
     </div>
   </section>
