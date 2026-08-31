@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Persian Home — Ristorante Persiano a Montebelluna</title>
+<meta name="description" content="Ristorante Persian Home a Montebelluna (TV): cucina persiana autentica preparata al momento, tè di benvenuto, dolci fatti in casa e ospitalità di Parvaneh e Hosein.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Lalezar&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <nav class="navbar">
+    <a href="#top" class="brand">Persian <span>Home</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri il menu di navigazione" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#chi-siamo">Chi siamo</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#esperienza">L'esperienza</a></li>
+      <li><a href="#galleria">Galleria</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+      <li><a href="#prenotazioni" class="nav-cta">Prenota</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-pattern" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Cucina persiana autentica &middot; Montebelluna</p>
+      <p class="farsi-accent" lang="fa" dir="rtl" aria-hidden="true">خوش آمدید</p>
+      <h1>Persian Home</h1>
+      <p class="hero-sub">Un salotto d'Oriente nel cuore di Montebelluna, dove ogni piatto nasce da una ricetta di famiglia e ogni ospite viene accolto con un tè caldo e un sorriso.</p>
+      <div class="hero-actions">
+        <a href="#prenotazioni" class="btn btn-solid">Prenota il tuo tavolo</a>
+        <a href="#menu" class="btn btn-outline">Scopri il menu</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="pattern-divider" aria-hidden="true"></div>
+
+  <section id="chi-siamo" class="about">
+    <div class="wrap about-grid">
+      <div class="about-art" aria-hidden="true">
+        <svg class="tea-art" viewBox="0 0 400 400">
+          <circle class="tea-medallion" cx="200" cy="200" r="188" />
+          <circle class="tea-medallion-inner" cx="200" cy="200" r="164" />
+          <path class="tea-glass" d="M150,150 L250,150 L238,290 L162,290 Z" />
+          <path class="tea-liquid" d="M158,190 L242,190 L238,290 L162,290 Z" />
+          <path class="tea-handle" d="M250,175 C 285,175 285,235 250,235" />
+          <path class="tea-steam" d="M178,140 C170,118 192,110 184,88" />
+          <path class="tea-steam" d="M200,140 C192,118 214,110 206,88" />
+          <path class="tea-steam" d="M222,140 C214,118 236,110 228,88" />
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow">La nostra storia</p>
+        <h2>La cucina di Parvaneh e Hosein</h2>
+        <p>Persian Home nasce dal desiderio di Parvaneh e Hosein di condividere la vera cucina iraniana con Montebelluna: riso basmati profumato allo zafferano, carni marinate e grigliate lentamente, erbe fresche raccolte come si farebbe a casa propria.</p>
+        <p>Non serviamo piatti pronti: ogni ricetta viene preparata al momento, con la stessa cura con cui Parvaneh la tramanderebbe a un figlio. Il resto lo fa l'accoglienza — la stessa che si riceve entrando in una casa persiana.</p>
+        <ul class="about-points">
+          <li>Ricette di famiglia, tramandate da generazioni</li>
+          <li>Ingredienti freschi e cotture lente, ogni giorno</li>
+          <li>Un'ospitalità pensata come tra amici, non da ristorante</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="pattern-divider" aria-hidden="true"></div>
+
+  <section id="menu" class="menu-section">
+    <div class="wrap">
+      <p class="eyebrow">Il menu</p>
+      <h2>Sapori di Persia, preparati al momento</h2>
+      <p class="menu-intro">Una selezione di piatti classici della tavola iraniana. Ogni portata viene cucinata dopo l'ordine: i tempi più lunghi sono il nostro modo di garantire freschezza.</p>
+
+      <div class="menu-tabs" role="tablist" aria-label="Categorie menu">
+        <button class="tab-btn active" data-tab="antipasti" role="tab" aria-selected="true">Antipasti</button>
+        <button class="tab-btn" data-tab="principali" role="tab" aria-selected="false">Piatti Principali</button>
+        <button class="tab-btn" data-tab="dolci" role="tab" aria-selected="false">Dolci</button>
+      </div>
+
+      <div class="menu-panel" data-panel="antipasti">
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Mast-o-Khiar</h3><p>Yogurt fresco con cetriolo, menta essiccata e uvetta.</p></div>
+          <div class="menu-item-price">€ 6</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Kashke Bademjan</h3><p>Crema di melanzane affumicate con kashk, menta croccante e cipolla fritta.</p></div>
+          <div class="menu-item-price">€ 7</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Nan-e Barbari</h3><p>Pane persiano appena sfornato, servito con erbe fresche e formaggio feta.</p></div>
+          <div class="menu-item-price">€ 6</div>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="principali" hidden>
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Zereshk Polo ba Morgh</h3><p>Riso allo zafferano con barberry, pollo marinato alle spezie persiane.</p></div>
+          <div class="menu-item-price">€ 16</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Ghormeh Sabzi</h3><p>Stufato di erbe aromatiche, fagioli rossi e agnello, cotto lentamente.</p></div>
+          <div class="menu-item-price">€ 18</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Joje Kabab</h3><p>Spiedini di pollo marinati allo zafferano e limone, alla griglia.</p></div>
+          <div class="menu-item-price">€ 15</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Chelo Kabab Koobideh</h3><p>Spiedini di carne macinata speziata, con riso basmati allo zafferano.</p></div>
+          <div class="menu-item-price">€ 17</div>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="dolci" hidden>
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Bastani Sonnati</h3><p>Gelato tradizionale persiano allo zafferano, pistacchio e acqua di rose.</p></div>
+          <div class="menu-item-price">€ 5</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Baklava Persiana</h3><p>Sfoglie croccanti, pistacchio tritato e sciroppo all'acqua di rose.</p></div>
+          <div class="menu-item-price">€ 5</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-text"><h3>Sholezard</h3><p>Budino di riso allo zafferano, cannella e mandorle a scaglie.</p></div>
+          <div class="menu-item-price">€ 5</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pattern-divider" aria-hidden="true"></div>
+
+  <section id="esperienza" class="experience">
+    <div class="wrap">
+      <p class="eyebrow">L'esperienza Persian Home</p>
+      <h2 class="experience-h2">Più di una cena: un'accoglienza</h2>
+      <div class="experience-grid">
+        <div class="experience-card tilt">
+          <span class="experience-icon" aria-hidden="true">☕</span>
+          <h3>Tè di benvenuto</h3>
+          <p>Ogni ospite inizia la serata con un tè caldo servito nei tradizionali bicchierini estekan, come si fa in ogni casa persiana.</p>
+        </div>
+        <div class="experience-card tilt">
+          <span class="experience-icon" aria-hidden="true">🍮</span>
+          <h3>Dolci fatti in casa</h3>
+          <p>I dessert nascono nella nostra cucina: zafferano, acqua di rose e pistacchio, preparati ogni giorno da Parvaneh.</p>
+        </div>
+        <div class="experience-card tilt">
+          <span class="experience-icon" aria-hidden="true">🎶</span>
+          <h3>Musica persiana</h3>
+          <p>Melodie tradizionali in sottofondo accompagnano la cena, per un'atmosfera che profuma d'Oriente.</p>
+        </div>
+        <div class="experience-card tilt">
+          <span class="experience-icon" aria-hidden="true">🧿</span>
+          <h3>Atmosfera calda</h3>
+          <p>Tappeti, decori e colori che raccontano la Persia, in un ambiente pensato per farvi sentire a casa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pattern-divider" aria-hidden="true"></div>
+
+  <section id="galleria" class="gallery">
+    <div class="wrap">
+      <p class="eyebrow">Galleria</p>
+      <h2 class="gallery-h2">Un assaggio dell'atmosfera</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item tilt g1"><span>La sala</span></div>
+        <div class="gallery-item tilt g2"><span>Tè di benvenuto</span></div>
+        <div class="gallery-item tilt g3"><span>Zafferano</span></div>
+        <div class="gallery-item tilt g4"><span>Kabab alla griglia</span></div>
+        <div class="gallery-item tilt g5"><span>Dolci della casa</span></div>
+        <div class="gallery-item tilt g6"><span>Dettagli decorativi</span></div>
+      </div>
+      <p class="gallery-note">Foto segnaposto — presto il racconto per immagini della nostra sala.</p>
+    </div>
+  </section>
+
+  <div class="pattern-divider" aria-hidden="true"></div>
+
+  <section id="prenotazioni" class="reservations">
+    <div class="wrap reservations-grid">
+      <div>
+        <p class="eyebrow">Prenotazioni</p>
+        <h2>Riservate il vostro tavolo</h2>
+        <p>Consigliamo la prenotazione con almeno un giorno d'anticipo: la cucina di Parvaneh e Hosein prepara ogni piatto fresco, su misura per gli ospiti della serata.</p>
+        <p class="reservations-phone-note">Preferite chiamare? <a href="tel:+393715783119">+39 371 578 3119</a></p>
+      </div>
+      <form id="contactForm" class="reservation-form">
+        <div class="form-row">
+          <label>Nome<input type="text" name="nome" placeholder="Il tuo nome" required></label>
+          <label>Telefono<input type="tel" name="telefono" placeholder="Il tuo numero" required></label>
+        </div>
+        <div class="form-row">
+          <label>Data<input type="date" name="data" required></label>
+          <label>Ora<input type="time" name="ora" required></label>
+        </div>
+        <label>Numero di persone<input type="number" name="persone" min="1" max="20" placeholder="Es. 4" required></label>
+        <label>Messaggio (facoltativo)<textarea name="messaggio" rows="3" placeholder="Allergie, occasioni speciali, richieste particolari"></textarea></label>
+        <button type="submit" class="btn btn-solid form-submit">Richiedi prenotazione</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div class="pattern-divider" aria-hidden="true"></div>
+
+  <section id="contatti" class="contact-section">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow">Contatti</p>
+        <h2>Vieni a trovarci</h2>
+        <ul class="contact-list">
+          <li><strong>Indirizzo</strong><span>Via A. De Gasperi, 2/11<br>31044 Montebelluna (TV)</span></li>
+          <li><strong>Telefono</strong><span><a href="tel:+393715783119">+39 371 578 3119</a></span></li>
+          <li><strong>Titolari</strong><span>Parvaneh e Hosein</span></li>
+        </ul>
+        <p class="contact-note">Per gli orari di apertura aggiornati, contattateci telefonicamente.</p>
+      </div>
+      <div class="contact-map">
+        <iframe
+          title="Mappa: Ristorante Persian Home, Via A. De Gasperi 2/11, Montebelluna"
+          src="https://www.google.com/maps?q=Via%20A.%20De%20Gasperi%2C%202%2F11%2C%2031044%20Montebelluna%20TV%2C%20Italia&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">© <span id="year"></span> Ristorante Persian Home — Via A. De Gasperi 2/11, Montebelluna (TV). Sito dimostrativo creato a scopo di test.</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
