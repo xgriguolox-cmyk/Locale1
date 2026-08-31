@@ -93,6 +93,7 @@ img { max-width: 100%; }
   letter-spacing: 0.01em;
 }
 .brand span { color: var(--turquoise); }
+.brand-logo { height: 34px; width: auto; vertical-align: middle; margin-right: 8px; }
 
 .nav-links {
   list-style: none;
@@ -176,6 +177,8 @@ img { max-width: 100%; }
   color: var(--turquoise);
   margin: 0 0 6px;
 }
+
+.hero-logo { width: 84px; height: auto; margin-bottom: 18px; }
 
 .hero h1 {
   font-size: clamp(3rem, 8vw, 5rem);
@@ -299,23 +302,61 @@ section { padding: 88px 0; }
 .menu-panel {
   border: 1.5px solid rgba(246, 234, 214, 0.3);
   background: rgba(246, 234, 214, 0.06);
-  padding: 6px 0;
+  padding: 26px;
 }
 
-.menu-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 20px;
-  padding: 22px 28px;
-  border-bottom: 1px dashed rgba(246, 234, 214, 0.28);
+.menu-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
-.menu-item:last-child { border-bottom: none; }
+.menu-photo-grid[hidden] { display: none; }
 
-.menu-item-text h3 { font-family: "Marcellus", serif; color: var(--parchment); font-size: 1.15rem; margin-bottom: 6px; }
-.menu-item-text p { margin: 0; color: rgba(246, 234, 214, 0.75); font-size: 0.92rem; max-width: 50ch; }
+.menu-photo-item {
+  background: rgba(246, 234, 214, 0.06);
+  border: 1px solid rgba(246, 234, 214, 0.2);
+}
 
-.menu-item-price { font-weight: 700; font-size: 1.05rem; color: #f0c987; white-space: nowrap; }
+.menu-photo-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  border-bottom: 3px solid var(--gold);
+}
+
+.menu-photo-double { display: flex; }
+.menu-photo-double img { aspect-ratio: 1/1; width: 50%; border-bottom: 3px solid var(--gold); }
+.menu-photo-double img:first-child { border-right: 1px solid var(--turquoise-dark); }
+
+.menu-photo-text { padding: 16px 18px 20px; }
+.menu-photo-text h3 {
+  font-family: "Marcellus", serif;
+  color: var(--parchment);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+.menu-photo-text p { margin: 0; color: rgba(246, 234, 214, 0.75); font-size: 0.9rem; }
+.menu-season {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--turquoise-dark);
+  background: #f0c987;
+  padding: 2px 8px;
+  border-radius: 2px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.menu-dessert-note {
+  margin-top: 30px;
+  padding: 22px 26px;
+  border: 1.5px dashed rgba(246, 234, 214, 0.35);
+}
+.menu-dessert-note h3 { font-family: "Marcellus", serif; color: #f0c987; font-size: 1.1rem; margin-bottom: 8px; }
+.menu-dessert-note p { margin: 0; color: rgba(246, 234, 214, 0.82); max-width: 68ch; }
 
 /* ---------- Experience ---------- */
 
@@ -454,7 +495,7 @@ section { padding: 88px 0; }
   .about-grid, .reservations-grid, .contact-grid { grid-template-columns: 1fr; }
   .about-art { max-width: 320px; margin: 0 auto; }
   .experience-grid { grid-template-columns: 1fr 1fr; }
-  .menu-panel, .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .menu-photo-grid, .gallery-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -475,8 +516,8 @@ section { padding: 88px 0; }
   .nav-links.open { display: flex; }
   .experience-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; }
+  .menu-photo-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   section { padding: 60px 0; }
   .hero-inner { padding: 72px 22px 64px; }
-  .menu-item { flex-direction: column; align-items: flex-start; gap: 6px; }
 }

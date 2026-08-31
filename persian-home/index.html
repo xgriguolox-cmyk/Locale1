@@ -14,7 +14,7 @@
 
 <header class="site-header" id="top">
   <nav class="navbar">
-    <a href="#top" class="brand">Persian <span>Home</span></a>
+    <a href="#top" class="brand"><img src="assets/logo.png" alt="" class="brand-logo">Persian <span>Home</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="Apri il menu di navigazione" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -34,6 +34,7 @@
   <section class="hero">
     <div class="hero-pattern" aria-hidden="true"></div>
     <div class="hero-inner">
+      <img src="assets/logo.png" alt="Persian Home" class="hero-logo">
       <p class="hero-eyebrow">Cucina persiana autentica &middot; Montebelluna</p>
       <p class="farsi-accent" lang="fa" dir="rtl" aria-hidden="true">خوش آمدید</p>
       <h1>Persian Home</h1>
@@ -80,62 +81,70 @@
   <section id="menu" class="menu-section">
     <div class="wrap">
       <p class="eyebrow">Il menu</p>
-      <h2>Sapori di Persia, preparati al momento</h2>
-      <p class="menu-intro">Una selezione di piatti classici della tavola iraniana. Ogni portata viene cucinata dopo l'ordine: i tempi più lunghi sono il nostro modo di garantire freschezza.</p>
+      <h2>Il nostro menu fisso</h2>
+      <p class="menu-intro">Da Persian Home si mangia con un menu fisso: un antipasto, un piatto unico a scelta e dessert con tè, tutto preparato al momento. La scelta del piatto unico cambia sera per sera — questi sono alcuni dei protagonisti.</p>
 
       <div class="menu-tabs" role="tablist" aria-label="Categorie menu">
         <button class="tab-btn active" data-tab="antipasti" role="tab" aria-selected="true">Antipasti</button>
-        <button class="tab-btn" data-tab="principali" role="tab" aria-selected="false">Piatti Principali</button>
-        <button class="tab-btn" data-tab="dolci" role="tab" aria-selected="false">Dolci</button>
+        <button class="tab-btn" data-tab="principali" role="tab" aria-selected="false">Piatto Unico</button>
       </div>
 
-      <div class="menu-panel" data-panel="antipasti">
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Mast-o-Khiar</h3><p>Yogurt fresco con cetriolo, menta essiccata e uvetta.</p></div>
-          <div class="menu-item-price">€ 6</div>
+      <div class="menu-panel menu-photo-grid" data-panel="antipasti">
+        <div class="menu-photo-item">
+          <img src="assets/involtini-melanzane.jpg" alt="Involtini di melanzane" loading="lazy">
+          <div class="menu-photo-text"><h3>Involtini di Melanzane</h3><p>Melanzane, noci, cacio e pepe, menta, con pane tipico.</p></div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Kashke Bademjan</h3><p>Crema di melanzane affumicate con kashk, menta croccante e cipolla fritta.</p></div>
-          <div class="menu-item-price">€ 7</div>
+        <div class="menu-photo-item">
+          <img src="assets/mirza-ghasemi.jpg" alt="Mirza Ghasemi" loading="lazy">
+          <div class="menu-photo-text"><h3>Mirza Ghasemi</h3><p>Melanzane, uova, pomodori e aglio.</p></div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Nan-e Barbari</h3><p>Pane persiano appena sfornato, servito con erbe fresche e formaggio feta.</p></div>
-          <div class="menu-item-price">€ 6</div>
+        <div class="menu-photo-item">
+          <img src="assets/cucu-sabzi.jpg" alt="Cucu Sabzi" loading="lazy">
+          <div class="menu-photo-text"><h3>Cucu Sabzi</h3><p>Uova, prezzemolo, erba cipollina, coriandolo, semi di crispino e noci.</p></div>
         </div>
-      </div>
-
-      <div class="menu-panel" data-panel="principali" hidden>
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Zereshk Polo ba Morgh</h3><p>Riso allo zafferano con barberry, pollo marinato alle spezie persiane.</p></div>
-          <div class="menu-item-price">€ 16</div>
+        <div class="menu-photo-item">
+          <img src="assets/insalata.jpg" alt="Insalata mista" loading="lazy">
+          <div class="menu-photo-text"><h3>Insalata</h3><p>Insalata mista di stagione con salsa speciale della casa.</p></div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Ghormeh Sabzi</h3><p>Stufato di erbe aromatiche, fagioli rossi e agnello, cotto lentamente.</p></div>
-          <div class="menu-item-price">€ 18</div>
+        <div class="menu-photo-item">
+          <img src="assets/zuppa-orzo.jpg" alt="Zuppa di orzo" loading="lazy">
+          <div class="menu-photo-text"><h3>Zuppa di Orzo <span class="menu-season">inverno</span></h3><p>Orzo, carote, cipolla, funghi e latte.</p></div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Joje Kabab</h3><p>Spiedini di pollo marinati allo zafferano e limone, alla griglia.</p></div>
-          <div class="menu-item-price">€ 15</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Chelo Kabab Koobideh</h3><p>Spiedini di carne macinata speziata, con riso basmati allo zafferano.</p></div>
-          <div class="menu-item-price">€ 17</div>
+        <div class="menu-photo-item">
+          <img src="assets/mosto-khiar.jpg" alt="Mosto Khiar" loading="lazy">
+          <div class="menu-photo-text"><h3>Mosto Khiar <span class="menu-season">estate</span></h3><p>Yogurt con cetrioli, noci, cipolla e menta.</p></div>
         </div>
       </div>
 
-      <div class="menu-panel" data-panel="dolci" hidden>
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Bastani Sonnati</h3><p>Gelato tradizionale persiano allo zafferano, pistacchio e acqua di rose.</p></div>
-          <div class="menu-item-price">€ 5</div>
+      <div class="menu-panel menu-photo-grid" data-panel="principali" hidden>
+        <div class="menu-photo-item">
+          <img src="assets/khoresh-fessenjan.jpg" alt="Khoresh Fessenjan" loading="lazy">
+          <div class="menu-photo-text"><h3>Khoresh Fessenjan</h3><p>Riso basmati allo zafferano, pollo, noci e concentrato di melograno.</p></div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Baklava Persiana</h3><p>Sfoglie croccanti, pistacchio tritato e sciroppo all'acqua di rose.</p></div>
-          <div class="menu-item-price">€ 5</div>
+        <div class="menu-photo-item">
+          <img src="assets/zereshk-polo.jpg" alt="Zereshk Polo con pollo" loading="lazy">
+          <div class="menu-photo-text"><h3>Zereshk Polo con Pollo</h3><p>Riso basmati allo zafferano, bacche di crispino, pistacchi, mandorle e pollo.</p></div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-text"><h3>Sholezard</h3><p>Budino di riso allo zafferano, cannella e mandorle a scaglie.</p></div>
-          <div class="menu-item-price">€ 5</div>
+        <div class="menu-photo-item">
+          <img src="assets/khoresh-gheimeh.jpg" alt="Khoresh Gheimeh" loading="lazy">
+          <div class="menu-photo-text"><h3>Khoresh Gheimeh</h3><p>Riso basmati allo zafferano, carne di vitello, pomodori, cannella, cotiledone e lime.</p></div>
         </div>
+        <div class="menu-photo-item">
+          <img src="assets/cholo-berenj.jpg" alt="Cholo Berenj" loading="lazy">
+          <div class="menu-photo-text"><h3>Cholo Berenj</h3><p>Riso basmati allo zafferano, semi di crispino e carne di vitello.</p></div>
+        </div>
+        <div class="menu-photo-item menu-photo-item-double">
+          <div class="menu-photo-double">
+            <img src="assets/baghali-agnello.jpg" alt="Baghali Polo con agnello" loading="lazy">
+            <img src="assets/baghali-pollo.jpg" alt="Baghali Polo con pollo" loading="lazy">
+          </div>
+          <div class="menu-photo-text"><h3>Baghali Polo</h3><p>Riso basmati allo zafferano, fave e aneto, con carne di agnello oppure pollo.</p></div>
+        </div>
+      </div>
+
+      <div class="menu-dessert-note">
+        <h3>Per finire</h3>
+        <p>Dolcetti tipici artigianali, accompagnati da tè caldo (menu invernale) o sharbat, la bevanda fresca e dolce della tradizione (menu estivo). Disponibili anche acqua naturale e frizzante e bevande in lattina.</p>
       </div>
     </div>
   </section>
@@ -196,8 +205,8 @@
       <div>
         <p class="eyebrow">Prenotazioni</p>
         <h2>Riservate il vostro tavolo</h2>
-        <p>Consigliamo la prenotazione con almeno un giorno d'anticipo: la cucina di Parvaneh e Hosein prepara ogni piatto fresco, su misura per gli ospiti della serata.</p>
-        <p class="reservations-phone-note">Preferite chiamare? <a href="tel:+393715783119">+39 371 578 3119</a></p>
+        <p>La prenotazione è <strong>obbligatoria</strong>, con almeno un giorno d'anticipo: la cucina di Parvaneh e Hosein prepara ogni menu fresco, su misura per gli ospiti della serata. Siamo aperti tutti i giorni fino alle 23:00.</p>
+        <p class="reservations-phone-note">Prenota su WhatsApp: <a href="https://wa.me/393715783119">+39 371 578 3119</a> oppure <a href="https://wa.me/393713536664">+39 371 353 6664</a></p>
       </div>
       <form id="contactForm" class="reservation-form">
         <div class="form-row">
@@ -224,11 +233,13 @@
         <p class="eyebrow">Contatti</p>
         <h2>Vieni a trovarci</h2>
         <ul class="contact-list">
-          <li><strong>Indirizzo</strong><span>Via A. De Gasperi, 2/11<br>31044 Montebelluna (TV)</span></li>
+          <li><strong>Indirizzo</strong><span>Via Alcide De Gasperi, 2/11<br>31044 Montebelluna (TV)</span></li>
           <li><strong>Telefono</strong><span><a href="tel:+393715783119">+39 371 578 3119</a></span></li>
+          <li><strong>WhatsApp</strong><span><a href="https://wa.me/393715783119">371 578 3119</a> &middot; <a href="https://wa.me/393713536664">371 353 6664</a></span></li>
+          <li><strong>Orari</strong><span>Tutti i giorni, fino alle 23:00</span></li>
           <li><strong>Titolari</strong><span>Parvaneh e Hosein</span></li>
         </ul>
-        <p class="contact-note">Per gli orari di apertura aggiornati, contattateci telefonicamente.</p>
+        <p class="contact-note">Prenotazione obbligatoria, con un giorno d'anticipo.</p>
       </div>
       <div class="contact-map">
         <iframe
