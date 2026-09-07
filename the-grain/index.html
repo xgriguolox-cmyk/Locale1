@@ -7,14 +7,22 @@
 <meta name="description" content="The Grain, bar aperitivo a Montebelluna (TV): cocktail firmati, spritz e taglieri da condividere in Via Luigi Serena.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="grain-ring" viewBox="0 0 100 100">
+    <circle cx="50" cy="52" r="32" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-dasharray="178 23" stroke-dashoffset="26" />
+    <line x1="68" y1="24" x2="68" y2="50" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+    <circle cx="27" cy="80" r="4.5" fill="currentColor" />
+  </symbol>
+</svg>
+
 <header class="site-header" id="top">
   <nav class="navbar">
-    <a href="#top" class="brand"><img class="brand-mark" src="assets/logo-mark.jpg" alt="" aria-hidden="true">The Grain</a>
+    <a href="#top" class="brand"><svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#grain-ring"></use></svg>The Grain</a>
     <button class="nav-toggle" id="navToggle" aria-label="Apri il menu di navigazione" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -41,15 +49,16 @@
     </svg>
     <div class="hero-inner">
       <p class="hero-eyebrow">Bar aperitivo &middot; Montebelluna</p>
-      <h1>The Grain</h1>
+      <div class="hero-logo">
+        <svg class="hero-logo-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#grain-ring"></use></svg>
+        <h1>The Grain</h1>
+      </div>
+      <p class="hero-tagline">bar &amp; cocktail lounge</p>
       <p class="hero-sub">Cocktail firmati, spritz curati e taglieri da condividere, in Via Luigi Serena nel cuore di Montebelluna.</p>
       <div class="hero-actions">
         <a href="#menu" class="btn btn-solid">Scopri il menu</a>
         <a href="https://www.instagram.com/thegrain_bar/" target="_blank" rel="noopener" class="btn btn-outline">Seguici su Instagram</a>
       </div>
-      <figure class="hero-sign">
-        <img src="assets/logo-sign.jpg" alt="Insegna del locale The Grain — bar &amp; cocktail lounge">
-      </figure>
     </div>
   </section>
 

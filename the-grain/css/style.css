@@ -15,7 +15,8 @@
   --glow-text: 0 0 10px rgba(255, 122, 26, 0.55), 0 0 24px rgba(255, 46, 77, 0.35);
   --radius-lg: 22px;
   --radius-md: 14px;
-  --font-head: 'Fraunces', 'Georgia', serif;
+  --font-head: 'Italiana', 'Georgia', serif;
+  --font-tagline: 'Cormorant Garamond', 'Georgia', serif;
   --font-body: 'Karla', 'Segoe UI', sans-serif;
 }
 
@@ -45,9 +46,9 @@ h1, h2, h3 {
   color: var(--ink);
 }
 
-h1 { font-size: clamp(2.6rem, 5.5vw, 4rem); font-weight: 700; }
-h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); text-shadow: 0 0 18px rgba(255, 46, 77, 0.25); }
-h3 { font-size: 1.15rem; }
+h1 { font-size: clamp(2.6rem, 5.5vw, 4rem); font-weight: 400; letter-spacing: 0.02em; }
+h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 400; text-shadow: 0 0 18px rgba(255, 46, 77, 0.25); }
+h3 { font-size: 1.15rem; font-weight: 400; }
 
 p { margin: 0 0 1em; color: var(--ink-soft); }
 
@@ -102,11 +103,10 @@ section { padding: 84px 0; background: var(--bg); }
 }
 
 .brand-mark {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 0 2px var(--neon-orange), 0 0 12px rgba(255, 122, 26, 0.6);
+  width: 26px;
+  height: 26px;
+  color: var(--neon-orange);
+  filter: drop-shadow(0 0 6px rgba(255, 122, 26, 0.7));
 }
 
 .nav-links {
@@ -215,20 +215,31 @@ section { padding: 84px 0; background: var(--bg); }
   flex-wrap: wrap;
 }
 
-.hero-sign {
-  margin: 48px auto 0;
-  max-width: 420px;
-  padding: 10px;
-  background: #f4f4f2;
-  border-radius: 10px;
-  box-shadow: 0 0 0 1px rgba(255, 122, 26, 0.3), 0 20px 45px -18px rgba(255, 46, 77, 0.5), 0 0 30px -4px rgba(255, 122, 26, 0.4);
-  transform: rotate(-1.5deg);
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
 }
 
-.hero-sign img {
-  display: block;
-  width: 100%;
-  border-radius: 4px;
+.hero-logo-mark {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  color: var(--neon-orange);
+  filter: drop-shadow(0 0 10px rgba(255, 122, 26, 0.75));
+}
+
+.hero-logo h1 { margin: 0; }
+
+.hero-tagline {
+  font-family: var(--font-tagline);
+  font-size: 1.2rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-shadow: 0 0 12px rgba(255, 122, 26, 0.3);
+  margin: 6px 0 1.6em;
 }
 
 .btn {
