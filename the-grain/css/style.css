@@ -102,9 +102,11 @@ section { padding: 84px 0; background: var(--bg); }
 }
 
 .brand-mark {
-  color: var(--neon-orange);
-  font-size: 1.2rem;
-  text-shadow: 0 0 10px var(--neon-orange), 0 0 18px var(--neon-red);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px var(--neon-orange), 0 0 12px rgba(255, 122, 26, 0.6);
 }
 
 .nav-links {
@@ -211,6 +213,22 @@ section { padding: 84px 0; background: var(--bg); }
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.hero-sign {
+  margin: 48px auto 0;
+  max-width: 420px;
+  padding: 10px;
+  background: #f4f4f2;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(255, 122, 26, 0.3), 0 20px 45px -18px rgba(255, 46, 77, 0.5), 0 0 30px -4px rgba(255, 122, 26, 0.4);
+  transform: rotate(-1.5deg);
+}
+
+.hero-sign img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
 }
 
 .btn {
