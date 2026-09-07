@@ -13,6 +13,8 @@ _references/
 _tasks/
 .agents/**
 .claude/**
+# ...ma le skill condivise del progetto vanno versionate
+!.claude/skills/**
 .gemini/**
 .code-forge/**
 .config/**
@@ -214,7 +216,9 @@ scripts/i18n/_pending-keys.json
 # AI agent local settings and configs
 .agents/
 .antigravitycli/
-/.claude/
+/.claude/*
+# ...ma le skill condivise del progetto vanno versionate
+!/.claude/skills/
 
 # PR Reviews and local feedback files
 pr_reviews*.json
