@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Mare a Monte — Ristorante di Pesce a Montebelluna</title>
+<meta name="description" content="Il Mare a Monte, ristorante di pesce e bacaro a Montebelluna (TV): cicchetti freschissimi, specialità dell'Adriatico e vini selezionati, a due passi da casa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <nav class="navbar">
+    <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">〜</span>Il Mare a Monte</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri il menu di navigazione" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#chi-siamo">Chi siamo</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#esperienza">L'esperienza</a></li>
+      <li><a href="#galleria">Galleria</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+      <li><a href="#prenotazioni" class="nav-cta">Prenota</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <svg class="hero-waves" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+      <path class="wave wave-1" d="M0,120 C150,180 350,60 600,110 C850,160 1050,80 1200,130 L1200,300 L0,300 Z" />
+      <path class="wave wave-2" d="M0,160 C200,110 400,200 650,150 C900,100 1050,180 1200,150 L1200,300 L0,300 Z" />
+      <path class="wave wave-3" d="M0,200 C250,240 450,170 700,200 C900,225 1050,190 1200,210 L1200,300 L0,300 Z" />
+    </svg>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Ristorante di pesce &middot; Montebelluna</p>
+      <h1>Il Mare a Monte</h1>
+      <p class="hero-sub">Il bacaro di pesce nel cuore di Montebelluna: cicchetti freschissimi, specialità dell'Adriatico e vini selezionati — il mare è lontano, il sapore no.</p>
+      <div class="hero-actions">
+        <a href="#prenotazioni" class="btn btn-solid">Prenota il tuo tavolo</a>
+        <a href="#menu" class="btn btn-outline">Scopri il menu</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="chi-siamo" class="about">
+    <div class="wrap about-grid">
+      <div class="about-art" aria-hidden="true">
+        <svg class="fish-art" viewBox="0 0 400 400">
+          <circle class="art-ring" cx="200" cy="200" r="176" />
+          <path class="fish-body" d="M110,200 C140,150 260,150 300,200 C260,250 140,250 110,200 Z" />
+          <path class="fish-tail" d="M110,200 L70,165 L70,235 Z" />
+          <circle class="fish-eye" cx="270" cy="190" r="7" />
+          <path class="fish-fin" d="M190,150 C205,130 225,130 235,150 Z" />
+          <path class="bubble" d="M320,140 a8,8 0 1,1 0.1,0" />
+          <path class="bubble bubble-sm" d="M340,115 a5,5 0 1,1 0.1,0" />
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow">La nostra storia</p>
+        <h2>Il mare, portato a Montebelluna</h2>
+        <p>Il Mare a Monte nasce nel 2022 dall'idea di Angela e Angelo: portare in centro città il sapore autentico dell'Adriatico. Siamo l'unico bacaro di Montebelluna dedicato ai cicchetti di pesce, ma anche un piccolo ristorante dove gustare crudi, grigliate e la pasta della tradizione marinara.</p>
+        <p>Il pesce viene scelto e acquistato ogni giorno, per portare in tavola solo la freschezza che merita di essere raccontata.</p>
+        <ul class="about-points">
+          <li>Pesce selezionato ogni giorno, sul mercato</li>
+          <li>Cicchetti in stile bacaro veneziano</li>
+          <li>Vini locali e nazionali scelti con cura</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C200,55 400,5 600,30 C800,55 1000,5 1200,30 L1200,60 L0,60 Z" /></svg>
+  </div>
+
+  <section id="menu" class="menu-section">
+    <div class="wrap">
+      <p class="eyebrow">Il menu</p>
+      <h2>Piatti di mare, ogni giorno freschi</h2>
+      <p class="menu-intro">Una selezione dei piatti più amati della casa. Il pesce arriva ogni giorno dal mercato: la disponibilità può variare in base alla giornata.</p>
+
+      <div class="menu-tabs" role="tablist" aria-label="Categorie menu">
+        <button class="tab-btn active" data-tab="antipasti" role="tab" aria-selected="true">Antipasti</button>
+        <button class="tab-btn" data-tab="primi" role="tab" aria-selected="false">Primi</button>
+        <button class="tab-btn" data-tab="secondi" role="tab" aria-selected="false">Secondi &amp; Grigliate</button>
+      </div>
+
+      <div class="menu-panel menu-card-grid" data-panel="antipasti">
+        <div class="menu-card tilt">
+          <div class="menu-card-art"><svg viewBox="0 0 100 100" aria-hidden="true"><ellipse class="icon-plate" cx="50" cy="58" rx="38" ry="14" /><path class="icon-shell" d="M30,58 Q50,20 70,58 Z" /><path class="icon-shell icon-shell-2" d="M42,58 Q50,32 58,58 Z" /></svg></div>
+          <div class="menu-card-text"><h3>Antipasti di Mare</h3><p>Selezione di crudi e cotti della tradizione adriatica, secondo la disponibilità del giorno.</p></div>
+        </div>
+        <div class="menu-card tilt">
+          <div class="menu-card-art"><svg viewBox="0 0 100 100" aria-hidden="true"><ellipse class="icon-plate" cx="50" cy="58" rx="38" ry="14" /><circle class="icon-shell" cx="38" cy="52" r="9" /><circle class="icon-shell icon-shell-2" cx="58" cy="48" r="7" /><circle class="icon-shell" cx="64" cy="60" r="6" /></svg></div>
+          <div class="menu-card-text"><h3>Misto di Crudo</h3><p>Il meglio del pescato crudo del giorno, per chi ama il mare senza compromessi.</p></div>
+        </div>
+      </div>
+
+      <div class="menu-panel menu-card-grid" data-panel="primi" hidden>
+        <div class="menu-card tilt">
+          <div class="menu-card-art"><svg viewBox="0 0 100 100" aria-hidden="true"><ellipse class="icon-plate" cx="50" cy="58" rx="38" ry="14" /><path class="icon-pasta" d="M20,58 Q30,45 40,58 T60,58 T80,58" /><circle class="icon-shell" cx="35" cy="50" r="5" /><circle class="icon-shell icon-shell-2" cx="65" cy="52" r="5" /></svg></div>
+          <div class="menu-card-text"><h3>Spaghetti al Nero di Seppia con Vongole</h3><p>Il classico marinaro, mantecato con vongole fresche.</p></div>
+        </div>
+        <div class="menu-card tilt">
+          <div class="menu-card-art"><svg viewBox="0 0 100 100" aria-hidden="true"><ellipse class="icon-plate" cx="50" cy="58" rx="38" ry="14" /><path class="icon-pasta" d="M22,55 Q32,42 42,55 T62,55 T82,55" /><path class="icon-shell" d="M50,45 a10,8 0 1,1 0.1,0" /></svg></div>
+          <div class="menu-card-text"><h3>Paccheri al Gransoporo</h3><p>Paccheri trafilati al bronzo, sugo di granceola fresca.</p></div>
+          <div class="menu-card-price">€ 26</div>
+        </div>
+      </div>
+
+      <div class="menu-panel menu-card-grid" data-panel="secondi" hidden>
+        <div class="menu-card tilt">
+          <div class="menu-card-art"><svg viewBox="0 0 100 100" aria-hidden="true"><ellipse class="icon-plate" cx="50" cy="58" rx="38" ry="14" /><path class="icon-squid" d="M50,35 C40,35 34,48 40,58 L38,68 L44,60 L48,68 L50,60 L52,68 L56,60 L62,68 L60,58 C66,48 60,35 50,35 Z" /></svg></div>
+          <div class="menu-card-text"><h3>Calamari Fritti</h3><p>Calamari freschi, fritti leggeri, serviti con limone.</p></div>
+          <div class="menu-card-price">€ 17</div>
+        </div>
+        <div class="menu-card tilt">
+          <div class="menu-card-art"><svg viewBox="0 0 100 100" aria-hidden="true"><ellipse class="icon-plate" cx="50" cy="58" rx="38" ry="14" /><path class="icon-squid icon-squid-grill" d="M50,35 C40,35 34,48 40,58 L38,68 L44,60 L48,68 L50,60 L52,68 L56,60 L62,68 L60,58 C66,48 60,35 50,35 Z" /><line class="icon-grill-line" x1="34" y1="46" x2="66" y2="46" /><line class="icon-grill-line" x1="34" y1="54" x2="66" y2="54" /></svg></div>
+          <div class="menu-card-text"><h3>Calamari alla Griglia</h3><p>Calamari freschi, cotti alla griglia con olio e prezzemolo.</p></div>
+          <div class="menu-card-price">€ 18</div>
+        </div>
+        <div class="menu-card tilt">
+          <div class="menu-card-art"><svg viewBox="0 0 100 100" aria-hidden="true"><ellipse class="icon-plate" cx="50" cy="58" rx="38" ry="14" /><path class="fish-body fish-body-sm" d="M32,55 C42,42 62,42 72,55 C62,68 42,68 32,55 Z" /><path class="fish-tail fish-tail-sm" d="M32,55 L20,45 L20,65 Z" /></svg></div>
+          <div class="menu-card-text"><h3>Frittura di Paranza</h3><p>Il misto di paranza fritto croccante, come da tradizione.</p></div>
+          <div class="menu-card-price">€ 28</div>
+        </div>
+        <div class="menu-card tilt">
+          <div class="menu-card-art"><svg viewBox="0 0 100 100" aria-hidden="true"><ellipse class="icon-plate" cx="50" cy="58" rx="38" ry="14" /><path class="fish-body fish-body-sm" d="M28,55 C36,42 54,42 62,55 C54,68 36,68 28,55 Z" /><path class="fish-tail fish-tail-sm" d="M28,55 L16,45 L16,65 Z" /><path class="icon-shell" d="M66,50 a8,7 0 1,1 0.1,0" /><line class="icon-grill-line" x1="24" y1="60" x2="70" y2="60" /></svg></div>
+          <div class="menu-card-text"><h3>Grigliata Mista</h3><p>Il pescato del giorno alla griglia, porzione abbondante.</p></div>
+          <div class="menu-card-price">€ 35 <span class="menu-unit">/ persona</span></div>
+        </div>
+      </div>
+
+      <p class="menu-note">I prezzi e la disponibilità dei piatti possono variare in base al pescato del giorno.</p>
+    </div>
+  </section>
+
+  <div class="wave-divider wave-divider-alt" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C200,55 400,5 600,30 C800,55 1000,5 1200,30 L1200,60 L0,60 Z" /></svg>
+  </div>
+
+  <section id="esperienza" class="experience">
+    <div class="wrap">
+      <p class="eyebrow">L'esperienza</p>
+      <h2 class="experience-h2">Un bacaro di mare, nel cuore della città</h2>
+      <div class="experience-grid">
+        <div class="experience-card tilt">
+          <span class="experience-icon" aria-hidden="true">🐟</span>
+          <h3>Pesce del giorno</h3>
+          <p>Scelto e acquistato ogni mattina, per portare in tavola solo la freschezza che merita di essere raccontata.</p>
+        </div>
+        <div class="experience-card tilt">
+          <span class="experience-icon" aria-hidden="true">🥂</span>
+          <h3>Cicchetti da bacaro</h3>
+          <p>Piccoli assaggi di mare da gustare in compagnia, come nella miglior tradizione veneziana.</p>
+        </div>
+        <div class="experience-card tilt">
+          <span class="experience-icon" aria-hidden="true">🍷</span>
+          <h3>Vini selezionati</h3>
+          <p>Etichette locali e nazionali scelte per accompagnare al meglio ogni piatto di mare.</p>
+        </div>
+        <div class="experience-card tilt">
+          <span class="experience-icon" aria-hidden="true">🌊</span>
+          <h3>Atmosfera conviviale</h3>
+          <p>Un ambiente accogliente, curato da Angela e Angelo con la gentilezza di chi ama il proprio lavoro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C200,55 400,5 600,30 C800,55 1000,5 1200,30 L1200,60 L0,60 Z" /></svg>
+  </div>
+
+  <section id="galleria" class="gallery">
+    <div class="wrap">
+      <p class="eyebrow">Galleria</p>
+      <h2 class="gallery-h2">Un assaggio dell'atmosfera</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item tilt g1"><span>La sala</span></div>
+        <div class="gallery-item tilt g2"><span>Il bancone</span></div>
+        <div class="gallery-item tilt g3"><span>Crudo di mare</span></div>
+        <div class="gallery-item tilt g4"><span>Cicchetti</span></div>
+        <div class="gallery-item tilt g5"><span>Grigliata</span></div>
+        <div class="gallery-item tilt g6"><span>Calice di vino</span></div>
+      </div>
+      <p class="gallery-note">Foto segnaposto — presto il racconto per immagini della nostra sala e dei nostri piatti.</p>
+    </div>
+  </section>
+
+  <div class="wave-divider wave-divider-alt" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C200,55 400,5 600,30 C800,55 1000,5 1200,30 L1200,60 L0,60 Z" /></svg>
+  </div>
+
+  <section id="feedback" class="feedback">
+    <div class="wrap">
+      <p class="eyebrow">Feedback</p>
+      <h2 class="feedback-h2">Cosa dicono i nostri ospiti</h2>
+
+      <div class="feedback-stats">
+        <div class="feedback-stat">
+          <strong>3,9<span>/5</span></strong>
+          <span>Restaurant Guru &middot; 136 recensioni</span>
+        </div>
+        <div class="feedback-stat">
+          <strong>3,6<span>/5</span></strong>
+          <span>TripAdvisor &middot; ~40 recensioni</span>
+        </div>
+      </div>
+
+      <div class="feedback-quotes">
+        <blockquote class="feedback-quote">
+          <p>&laquo;Piatti di qualità straordinaria: si sente pienamente la freschezza del pesce.&raquo;</p>
+          <footer>Recensione da TripAdvisor <span class="feedback-translated">(tradotta dall'inglese)</span></footer>
+        </blockquote>
+        <blockquote class="feedback-quote">
+          <p>&laquo;Ottimo pesce, titolari molto gentili.&raquo;</p>
+          <footer>Recensione da TripAdvisor <span class="feedback-translated">(tradotta dall'inglese)</span></footer>
+        </blockquote>
+      </div>
+
+      <p class="feedback-cta">Leggi tutte le recensioni su <a href="https://www.tripadvisor.com/Restaurant_Review-g666334-d23996889-Reviews-Il_Mare_A_Monte-Montebelluna_Province_of_Treviso_Veneto.html" target="_blank" rel="noopener">TripAdvisor</a> o su <a href="https://restaurantguru.com/Il-Mare-A-Monte-Montebelluna" target="_blank" rel="noopener">Restaurant Guru</a>.</p>
+    </div>
+  </section>
+
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C200,55 400,5 600,30 C800,55 1000,5 1200,30 L1200,60 L0,60 Z" /></svg>
+  </div>
+
+  <section id="prenotazioni" class="reservations">
+    <div class="wrap reservations-grid">
+      <div>
+        <p class="eyebrow">Prenotazioni</p>
+        <h2>Riservate il vostro tavolo</h2>
+        <p>Vi consigliamo di prenotare, specialmente nel weekend: i posti al bacaro sono limitati e il pesce fresco va a ruba.</p>
+        <p class="reservations-hours"><strong>Orari:</strong> chiuso il lunedì &middot; martedì 18:00&ndash;24:00 &middot; mercoledì&ndash;domenica 10:00&ndash;15:00 e 18:00&ndash;24:00</p>
+        <p class="reservations-phone-note">Preferite chiamare? <a href="tel:+393421985251">+39 342 198 5251</a></p>
+      </div>
+      <form id="contactForm" class="reservation-form">
+        <div class="form-row">
+          <label>Nome<input type="text" name="nome" placeholder="Il tuo nome" required></label>
+          <label>Telefono<input type="tel" name="telefono" placeholder="Il tuo numero" required></label>
+        </div>
+        <div class="form-row">
+          <label>Data<input type="date" name="data" required></label>
+          <label>Ora<input type="time" name="ora" required></label>
+        </div>
+        <label>Numero di persone<input type="number" name="persone" min="1" max="20" placeholder="Es. 4" required></label>
+        <label>Messaggio (facoltativo)<textarea name="messaggio" rows="3" placeholder="Allergie, occasioni speciali, richieste particolari"></textarea></label>
+        <button type="submit" class="btn btn-solid form-submit">Invia richiesta su WhatsApp</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div class="wave-divider wave-divider-alt" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C200,55 400,5 600,30 C800,55 1000,5 1200,30 L1200,60 L0,60 Z" /></svg>
+  </div>
+
+  <section id="contatti" class="contact-section">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow">Contatti</p>
+        <h2>Vieni a trovarci</h2>
+        <ul class="contact-list">
+          <li><strong>Indirizzo</strong><span>Corso Giuseppe Mazzini, 160<br>31044 Montebelluna (TV)</span></li>
+          <li><strong>Telefono</strong><span><a href="tel:+393421985251">+39 342 198 5251</a></span></li>
+          <li><strong>Orari</strong><span>Chiuso lunedì<br>Martedì 18:00&ndash;24:00<br>Mer&ndash;Dom 10:00&ndash;15:00 e 18:00&ndash;24:00</span></li>
+          <li><strong>Titolari</strong><span>Angela e Angelo</span></li>
+        </ul>
+      </div>
+      <a class="contact-map map-fallback" href="https://www.google.com/maps?q=Corso%20Giuseppe%20Mazzini%2C%20160%2C%2031044%20Montebelluna%20TV%2C%20Italia" target="_blank" rel="noopener">
+        <span class="map-fallback-icon" aria-hidden="true">📍</span>
+        <span class="map-fallback-text">Apri la mappa su Google Maps<br><small>Corso Giuseppe Mazzini, 160 — Montebelluna (TV)</small></span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">© <span id="year"></span> Ristorante Il Mare a Monte — Corso Giuseppe Mazzini 160, Montebelluna (TV). Sito dimostrativo creato a scopo di test.</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
