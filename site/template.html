@@ -259,7 +259,9 @@ p { margin: 0; }
   padding: 10px;
   background: var(--night-2);
 }
-.hero__plate img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+/* Inquadratura spostata in basso: nell'originale il piatto sta nella meta'
+   inferiore, il ritaglio centrato lascerebbe fuori il bordo del piatto. */
+.hero__plate img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 80%; width: 100%; }
 .hero__plate figcaption {
   display: flex;
   align-items: baseline;
