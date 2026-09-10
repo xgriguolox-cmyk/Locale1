@@ -26,6 +26,13 @@
   --line:       rgba(228, 169, 60, 0.24);
   --line-soft:  rgba(240, 234, 219, 0.12);
 
+  /* Telaio delle foto: giallo caldo -> arancio -> rosso arancio */
+  --neon-1:     #F8CE4E;
+  --neon-2:     #E8722C;
+  --neon-3:     #CE4318;
+  --neon-rgb:   232, 114, 44;
+  --neon-telaio: linear-gradient(135deg, var(--neon-1), var(--neon-2) 52%, var(--neon-3));
+
   --measure: 62ch;
   --shell: 1120px;
 
@@ -255,9 +262,10 @@ p { margin: 0; }
 }
 .hero__plate figure {
   margin: 0;
-  border: 1px solid var(--line);
+  border: 1px solid var(--neon-2);
   padding: 10px;
   background: var(--night-2);
+  box-shadow: 0 0 16px rgba(var(--neon-rgb), 0.24);
 }
 /* Inquadratura spostata in basso: nell'originale il piatto sta nella meta'
    inferiore, il ritaglio centrato lascerebbe fuori il bordo del piatto. */
@@ -346,7 +354,13 @@ p { margin: 0; }
 .firma span { font-size: 0.86rem; color: var(--linen-dim); }
 
 .storia__plate { justify-self: center; max-width: 380px; width: 100%; }
-.storia__plate figure { margin: 0; border: 1px solid var(--line); padding: 10px; background: var(--night-2); }
+.storia__plate figure {
+  margin: 0;
+  border: 1px solid var(--neon-2);
+  padding: 10px;
+  background: var(--night-2);
+  box-shadow: 0 0 16px rgba(var(--neon-rgb), 0.24);
+}
 .storia__plate img { aspect-ratio: 1 / 1; object-fit: cover; width: 100%; }
 .storia__plate figcaption { padding: 12px 4px 2px; font-size: 0.82rem; color: var(--linen-dim); }
 
@@ -398,30 +412,35 @@ p { margin: 0; }
 .dish { display: grid; gap: 12px; align-content: start; }
 
 .dish__img {
-  border: 1px solid var(--line-soft);
-  padding: 6px;
-  background: var(--night);
-  transition: border-color 0.25s ease;
+  padding: 5px;
+  background: var(--neon-telaio);
+  box-shadow: 0 0 10px rgba(var(--neon-rgb), 0.22);
+  transition: box-shadow 0.25s ease;
 }
 .dish__img img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
 /* Inquadratura spostata in basso: la firma del fotografo sta nel bordo alto
    dell'originale. Da togliere se questa foto viene sostituita. */
 .dish__img--basso img { object-position: center 75%; }
-.dish:hover .dish__img { border-color: var(--line); }
+.dish:hover .dish__img {
+  box-shadow: 0 0 16px rgba(var(--neon-rgb), 0.5), 0 0 36px rgba(var(--neon-rgb), 0.22);
+}
 
 .dish__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-2); }
 .dish h3 { font-size: 1.12rem; line-height: 1.25; }
 .dish__head .fa { font-size: 0.95rem; white-space: nowrap; }
 .dish p { font-size: 0.9rem; color: var(--linen-dim); line-height: 1.55; }
 
+/* Senza foto il telaio resta, ma la scritta ha bisogno del fondo scuro. */
 .dish--noimg .dish__img {
   display: grid;
-  place-items: center;
   aspect-ratio: 4 / 3;
-  padding: var(--s-3);
   text-align: center;
 }
 .dish--noimg .dish__img span {
+  display: grid;
+  place-items: center;
+  background: var(--night);
+  padding: var(--s-3);
   font-family: var(--f-display);
   font-style: italic;
   color: var(--saffron-dim);
