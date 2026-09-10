@@ -35,17 +35,20 @@ USCITA = RADICE / "dist" / "persian-home.html"
 
 ESTENSIONI = (".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif", ".avif")
 
-# Lato lungo in pixel della foto incorporata. I riquadri del menu sono larghi
-# ~340px, quindi 900px copre gli schermi retina con margine.
-LATO_STANDARD = 900
+# La pagina ritaglia ogni foto (object-fit: cover), quindi il vincolo e' il lato
+# CORTO: e' quello che resta dopo il ritaglio. I riquadri del menu sono larghi
+# ~340px, quindi 700px sul lato corto copre gli schermi retina con margine.
+LATO_STANDARD = 700
 LATO_PER_SLOT = {
-    "sholezard": 1200,  # foto grande dell'apertura
-    "dolcetti": 1200,   # foto grande della sezione storia
-    "logo": 160,        # mostrato a 30px, resta PNG per la trasparenza
+    "sholezard": 900,  # foto grande dell'apertura
+    "dolcetti": 900,   # foto grande della sezione storia
+    "logo": 160,       # mostrato a 30px, resta PNG per la trasparenza
 }
+# Tetto sul lato lungo, per non trascinare foto molto allungate.
+LATO_LUNGO_MAX = 1600
 
 # Sotto questa risoluzione la foto sgrana: va rifatta.
-SOGLIA_QUALITA = 800
+SOGLIA_QUALITA = 700
 
 LIMITE_PAGINA_MB = 15.0  # gli Artifact si fermano a 16 MB
 
@@ -58,14 +61,16 @@ def trova_foto(slug):
     return None
 
 
-def codifica(percorso, lato_max):
-    """Ridimensiona, comprime e restituisce (data-uri, larghezza_originale, byte)."""
+def codifica(percorso, lato_corto_max):
+    """Ridimensiona, comprime e restituisce (data-uri, lato_corto_originale, byte)."""
     with Image.open(percorso) as img:
         img = ImageOps.exif_transpose(img)  # raddrizza le foto da telefono
-        originale = max(img.size)
+        originale = min(img.size)
 
-        if originale > lato_max:
-            img.thumbnail((lato_max, lato_max), Image.LANCZOS)
+        scala = min(lato_corto_max / originale, LATO_LUNGO_MAX / max(img.size), 1.0)
+        if scala < 1.0:
+            img = img.resize((max(1, round(img.width * scala)),
+                              max(1, round(img.height * scala))), Image.LANCZOS)
 
         buf = io.BytesIO()
         if img.mode in ("RGBA", "LA", "P"):
@@ -87,7 +92,7 @@ def main():
     parser.add_argument("--qualita", type=int, default=82,
                         help="qualita JPEG 1-95 (default 82)")
     parser.add_argument("--lato", type=int, default=LATO_STANDARD,
-                        help=f"lato lungo in px (default {LATO_STANDARD})")
+                        help=f"lato corto in px (default {LATO_STANDARD})")
     parser.add_argument("--salta-mancanti", action="store_true",
                         help="continua anche se una foto manca, lasciando un riquadro vuoto")
     args = parser.parse_args()
@@ -152,7 +157,7 @@ def main():
     if sgranate:
         print(f"\n  Da rifare ad alta risoluzione ({len(sgranate)}):")
         for slug, px in sorted(sgranate, key=lambda x: x[1]):
-            print(f"    {slug:<24} lato lungo {px}px (servono almeno {SOGLIA_QUALITA})")
+            print(f"    {slug:<24} lato corto {px}px (servono almeno {SOGLIA_QUALITA})")
 
     if any(p.suffix.lower() in (".heic", ".heif") for p in FOTO.iterdir()) and not HEIC:
         print("\n  Ci sono file .heic ma manca il lettore: pip install pillow-heif")
