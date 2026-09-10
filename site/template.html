@@ -402,6 +402,9 @@ p { margin: 0; }
   transition: border-color 0.25s ease;
 }
 .dish__img img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+/* Inquadratura spostata in basso: la firma del fotografo sta nel bordo alto
+   dell'originale. Da togliere se questa foto viene sostituita. */
+.dish__img--basso img { object-position: center 75%; }
 .dish:hover .dish__img { border-color: var(--line); }
 
 .dish__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-2); }
@@ -848,7 +851,7 @@ p { margin: 0; }
           <p>Riso basmati allo zafferano e carne di vitello.</p>
         </li>
         <li class="dish">
-          <div class="dish__img"><img src="{{PHOTO:sabzi-polo-mahi}}" alt="Sabzi Polo con filetto di pesce" loading="lazy"></div>
+          <div class="dish__img dish__img--basso"><img src="{{PHOTO:sabzi-polo-mahi}}" alt="Sabzi Polo con filetto di pesce" loading="lazy"></div>
           <div class="dish__head"><h3>Sabzi Polo con pesce</h3><span class="fa" lang="fa">سبزی پلو با ماهی</span></div>
           <p>Riso alle erbe con zafferano, prezzemolo, fieno greco, aglio e filetto di pesce.</p>
         </li>
