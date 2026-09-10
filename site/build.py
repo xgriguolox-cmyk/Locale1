@@ -95,6 +95,9 @@ def main():
                         help=f"lato corto in px (default {LATO_STANDARD})")
     parser.add_argument("--salta-mancanti", action="store_true",
                         help="continua anche se una foto manca, lasciando un riquadro vuoto")
+    parser.add_argument("--anteprima", action="store_true",
+                        help="versione da mostrare a un cliente: toglie i dati "
+                             "amministrativi e le note di lavoro")
     args = parser.parse_args()
 
     global QUALITA
@@ -143,12 +146,22 @@ def main():
     pagina = re.sub(r"\{\{PHOTO:([a-z0-9-]+)\}\}",
                     lambda m: sostituzioni[m.group(1)], testo)
 
-    USCITA.parent.mkdir(parents=True, exist_ok=True)
-    USCITA.write_text(pagina, encoding="utf-8")
+    uscita = USCITA
+    if args.anteprima:
+        pagina, tolti = re.subn(r"<!--INTERNO-->.*?<!--/INTERNO-->", "", pagina, flags=re.S)
+        uscita = USCITA.with_name("persian-home-anteprima.html")
+        print(f"\n  Anteprima cliente: rimosse {tolti} sezioni interne")
+        rimasti = pagina.count('class="manca"')
+        if rimasti:
+            print(f"  ATTENZIONE: {rimasti} segnaposto ancora visibili, "
+                  f"vanno racchiusi fra <!--INTERNO--> e <!--/INTERNO-->")
+
+    uscita.parent.mkdir(parents=True, exist_ok=True)
+    uscita.write_text(pagina, encoding="utf-8")
     peso = len(pagina.encode()) / 1024 / 1024
 
     print("  " + "-" * 50)
-    print(f"\n  Scritto {USCITA.relative_to(RADICE.parent)} — {peso:.2f} MB")
+    print(f"\n  Scritto {uscita.relative_to(RADICE.parent)} — {peso:.2f} MB")
 
     if peso > LIMITE_PAGINA_MB:
         print(f"  Attenzione: oltre {LIMITE_PAGINA_MB} MB, un Artifact si ferma a 16 MB.")
