@@ -512,6 +512,7 @@ p { margin: 0; }
   gap: 6px;
 }
 .incluso h3 { font-size: 1.1rem; }
+.incluso__allergeni { font-size: 0.88rem; }
 .incluso p { color: var(--linen-dim); max-width: var(--measure); font-size: 0.95rem; }
 
 /* ---- esperienza ------------------------------------------ */
@@ -539,6 +540,11 @@ p { margin: 0; }
   gap: var(--s-6);
   align-items: center;
 }
+
+.voci__grid { align-items: center; }
+.voci__invito { color: var(--linen-dim); max-width: 46ch; }
+.voci__azione { display: grid; gap: var(--s-2); justify-items: start; }
+.voci__nota { font-size: 0.84rem; color: var(--linen-dim); }
 
 .punteggi { display: grid; gap: var(--s-3); }
 .punteggio { display: grid; gap: 2px; }
@@ -628,6 +634,18 @@ p { margin: 0; }
 .form input:focus, .form textarea:focus { border-color: var(--saffron); outline-offset: 1px; }
 .form textarea { min-height: 84px; }
 
+.consenso {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  font-size: 0.88rem;
+  color: var(--linen-dim);
+  cursor: pointer;
+}
+.consenso input { width: 20px; height: 20px; min-height: 0; margin: 2px 0 0; padding: 0; accent-color: var(--saffron); }
+.consenso a { color: var(--saffron); }
+
 .form__note { font-size: 0.88rem; color: var(--saffron); min-height: 1.5em; margin: 0; }
 
 /* ---- contatti -------------------------------------------- */
@@ -669,6 +687,58 @@ p { margin: 0; }
 .mappa span { font-size: 0.9rem; color: var(--linen-dim); }
 .mappa em { font-style: normal; font-size: 0.84rem; font-weight: 600; color: var(--saffron); }
 
+
+/* ---- informazioni e note legali --------------------------- */
+
+.legale { border-top: 1px solid var(--line-soft); background: var(--night-2); }
+.legale__blocco { margin-bottom: var(--s-4); }
+.legale__blocco h3 { font-size: 1.15rem; margin-bottom: var(--s-2); }
+
+.legale__dati { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; max-width: 62ch; font-size: 0.92rem; }
+.legale__dati li { display: grid; grid-template-columns: 12rem 1fr; gap: var(--s-2); }
+.legale__dati strong { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--saffron); padding-top: 3px; }
+.legale__dati a { color: var(--linen); text-decoration: none; }
+.legale__dati a:hover { color: var(--saffron); }
+
+.manca {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--night);
+  background: var(--rose);
+  border-radius: 2px;
+  padding: 1px 8px;
+}
+
+.legale__voce { border-top: 1px solid var(--line-soft); }
+.legale__voce summary {
+  cursor: pointer;
+  padding: 16px 2px;
+  min-height: 44px;
+  font-family: var(--f-display);
+  font-size: 1.08rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2);
+}
+.legale__voce summary::-webkit-details-marker { display: none; }
+.legale__voce summary::after { content: "+"; color: var(--saffron); font-size: 1.3rem; line-height: 1; }
+.legale__voce[open] summary::after { content: "\2013"; }
+.legale__voce summary:hover { color: var(--saffron); }
+
+.legale__testo { display: grid; gap: var(--s-2); padding: 0 2px var(--s-4); max-width: var(--measure); font-size: 0.94rem; color: var(--linen-dim); }
+.legale__testo strong { color: var(--linen); }
+.legale__avviso { border-left: 2px solid var(--rose); padding: 10px 0 10px var(--s-2); }
+.nowrap { white-space: nowrap; }
+
+@media (max-width: 560px) {
+  .legale__dati li { grid-template-columns: 1fr; gap: 2px; }
+}
+
 /* ---- footer ---------------------------------------------- */
 
 .piede {
@@ -677,6 +747,10 @@ p { margin: 0; }
   font-size: 0.82rem;
   color: var(--linen-dim);
 }
+.piede__link { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-3); }
+.piede__link a { color: var(--linen-dim); text-decoration: none; border-bottom: 1px solid transparent; }
+.piede__link a:hover { color: var(--saffron); border-bottom-color: var(--saffron); }
+
 .piede__inner { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4); justify-content: space-between; }
 
 /* ---- responsive ------------------------------------------ */
@@ -759,7 +833,7 @@ p { margin: 0; }
       <div>
         <p class="hero__greeting" lang="fa">خوش آمدید</p>
         <h1>Persian Home<span>una casa persiana a Montebelluna</span></h1>
-        <p class="hero__lede">Apriamo solo la sera, per un numero limitato di tavoli. Un menu fisso in tre tempi, cucinato al momento da Parvaneh e Hosein, che inizia come inizia ogni sera in Iran: con un tè caldo.</p>
+        <p class="hero__lede">Un menu fisso in tre tempi, cucinato al momento da Parvaneh e Hosein, che inizia come inizia ogni sera in Iran: con un tè caldo.</p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#prenota">Prenota un tavolo</a>
           <a class="btn btn--ghost" href="#menu">Guarda il menu</a>
@@ -782,7 +856,7 @@ p { margin: 0; }
   <!-- ============ LA SERATA: sequenza reale in tre tempi ============ -->
   <section class="serata band--tight">
     <div class="shell">
-      <p class="label">Come si mangia da noi</p>
+      <h2 class="label">Come si mangia da noi</h2>
       <div class="serata__grid">
         <div class="tempo">
           <p class="tempo__n">Primo tempo</p>
@@ -1071,6 +1145,7 @@ p { margin: 0; }
       <div class="incluso">
         <h3>Sempre incluso nel menu fisso</h3>
         <p>Dolcetti tipici artigianali con tè caldo nel menu invernale, o sharbat — la bevanda fresca della tradizione — nel menu estivo. Disponibili anche acqua naturale e frizzante e bevande in lattina.</p>
+        <p class="incluso__allergeni">Allergie o intolleranze? Segnalatecele quando prenotate. Le informazioni sugli allergeni dei singoli piatti sono disponibili in sala, come previsto dal Regolamento UE 1169/2011.</p>
       </div>
     </div>
   </section>
@@ -1079,7 +1154,7 @@ p { margin: 0; }
   <section class="esperienza band" id="esperienza">
     <div class="shell">
       <p class="label">La sera da Persian Home</p>
-      <h2>Quattro cose che troverete in tavola oltre al cibo</h2>
+      <h2>Quattro cose che accompagnano la cena</h2>
       <div class="tratti">
         <div class="tratto">
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 11h14l-1.4 15a2.6 2.6 0 0 1-2.6 2.4h-6a2.6 2.6 0 0 1-2.6-2.4z"/><path d="M22 14.5c4 0 4 6.5 0 6.5"/><path d="M11.5 8c0-2 1.5-2 1.5-4M16 8c0-2 1.5-2 1.5-4"/></svg>
@@ -1088,46 +1163,38 @@ p { margin: 0; }
         </div>
         <div class="tratto">
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c3 3.5 5 6.5 5 9.5a5 5 0 0 1-10 0C11 10.5 13 7.5 16 4z"/><path d="M6 22c3.5 2.5 6.5 3.5 10 3.5s6.5-1 10-3.5"/><path d="M9 27c2.5 1.3 4.7 2 7 2s4.5-.7 7-2"/></svg>
-          <h3>Zafferano vero</h3>
-          <p>Il colore del riso non viene da un colorante: è zafferano in pistilli, sciolto a mano prima del servizio.</p>
+          <h3>Zafferano</h3>
+          <p>È la firma della cucina persiana: dà al riso il colore e il profumo che riconoscete nei nostri piatti.</p>
         </div>
         <div class="tratto">
           <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="10" cy="24" r="3.5"/><circle cx="23" cy="21" r="3.5"/><path d="M13.5 24V8l13-3v16"/></svg>
           <h3>Musica persiana</h3>
-          <p>Melodie tradizionali in sottofondo, a volume da conversazione: si viene qui anche per parlare.</p>
+          <p>Melodie tradizionali in sottofondo, per un'atmosfera che profuma d'Oriente.</p>
         </div>
         <div class="tratto">
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l3.4 4.9 5.8-1.4-1.4 5.8L28.7 16l-4.9 3.4 1.4 5.8-5.8-1.4L16 28.7l-3.4-4.9-5.8 1.4 1.4-5.8L3.3 16l4.9-3.4-1.4-5.8 5.8 1.4z"/><circle cx="16" cy="16" r="4"/></svg>
-          <h3>Pochi tavoli</h3>
-          <p>Cuciniamo solo per chi ha prenotato. Nessuna fretta, nessun turno: la sala è vostra fino alla fine.</p>
+          <h3>Su prenotazione</h3>
+          <p>Si cucina per gli ospiti attesi: è per questo che chiediamo un giorno di anticipo.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============ VOCI ============ -->
-  <section class="voci band">
+  <section class="voci band--tight" id="recensioni">
     <div class="shell voci__grid">
-      <div class="punteggi">
-        <p class="label">Gli ospiti</p>
-        <div class="punteggio">
-          <strong>4,9<small>/5</small></strong>
-          <span>Restaurant Guru &middot; 64 recensioni</span>
-        </div>
-        <div class="punteggio">
-          <strong>5,0<small>/5</small></strong>
-          <span>Media recensioni Google</span>
-        </div>
+      <div>
+        <h2 class="label">Gli ospiti</h2>
+        <p class="voci__invito">Il racconto più utile a chi non è ancora venuto lo scrivete voi. Se siete stati da noi, bastano due righe.</p>
+      </div>
+      <div class="voci__azione">
         <a class="btn btn--ghost recensione" target="_blank" rel="noopener"
            href="https://www.google.com/maps/search/?api=1&amp;query=Persian%20Home%20Via%20Alcide%20De%20Gasperi%20Montebelluna">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/></svg>
-          Lasciaci una recensione
+          Lasciaci una recensione su Google
         </a>
+        <p class="voci__nota">Si apre la nostra scheda Google, dove trovate anche le recensioni già pubblicate.</p>
       </div>
-      <blockquote class="citazione">
-        <p>&ldquo;Un posto molto carino e intimo, con un'accoglienza super amichevole da parte della proprietaria. È stata un'esperienza fantastica assaggiare per la prima volta la cucina persiana: non vediamo l'ora di tornare.&rdquo;</p>
-        <footer>Recensione su <a href="https://restaurantguru.com/PERSIAN-HOME-Montebelluna" target="_blank" rel="noopener">Restaurant Guru</a>, tradotta dall'inglese</footer>
-      </blockquote>
     </div>
   </section>
 
@@ -1163,8 +1230,12 @@ p { margin: 0; }
           <label class="field" for="f-data"><span>Data</span><input id="f-data" name="data" type="date" required></label>
           <label class="field" for="f-ora"><span>Ora</span><input id="f-ora" name="ora" type="time" required></label>
         </div>
-        <label class="field" for="f-persone"><span>Persone</span><input id="f-persone" name="persone" type="number" min="1" max="20" inputmode="numeric" required></label>
-        <label class="field" for="f-note"><span>Note <small>— allergie, occasioni speciali</small></span><textarea id="f-note" name="note" rows="3"></textarea></label>
+        <label class="field" for="f-persone"><span>Persone</span><input id="f-persone" name="persone" type="number" min="1" max="20" inputmode="numeric" autocomplete="off" required></label>
+        <label class="field" for="f-note"><span>Note <small>— allergie, intolleranze, occasioni speciali</small></span><textarea id="f-note" name="note" rows="3" autocomplete="off"></textarea></label>
+        <label class="consenso" for="f-consenso">
+          <input id="f-consenso" name="consenso" type="checkbox" required>
+          <span>Ho letto l'<a href="#privacy">informativa privacy</a> e acconsento all'uso dei miei dati per gestire questa richiesta di prenotazione.</span>
+        </label>
         <button class="btn btn--primary" type="submit">Invia la richiesta</button>
         <p class="form__note" id="esito" role="status" aria-live="polite"></p>
       </form>
@@ -1195,16 +1266,85 @@ p { margin: 0; }
     </div>
   </section>
 
+  <!-- ============ INFORMAZIONI E NOTE LEGALI ============ -->
+  <section class="legale band--tight" id="legale">
+    <div class="shell">
+      <h2 class="label">Informazioni e note legali</h2>
+
+      <div class="legale__blocco">
+        <h3>Dati dell'attività</h3>
+        <ul class="legale__dati">
+          <li><strong>Denominazione</strong> <span class="manca">da completare</span></li>
+          <li><strong>Sede</strong> Via Alcide De Gasperi 2/11, 31044 Montebelluna (TV)</li>
+          <li><strong>Partita IVA</strong> <span class="manca">da completare</span></li>
+          <li><strong>Codice fiscale</strong> <span class="manca">da completare</span></li>
+          <li><strong>REA</strong> <span class="manca">da completare</span></li>
+          <li><strong>Telefono</strong> <a href="tel:+393715783119">+39 371 578 3119</a></li>
+          <li><strong>Email</strong> <span class="manca">da completare</span></li>
+        </ul>
+      </div>
+
+      <details class="legale__voce" id="privacy">
+        <summary>Informativa privacy</summary>
+        <div class="legale__testo">
+          <p>Ai sensi degli articoli 13 e 14 del Regolamento UE 2016/679 (GDPR).</p>
+          <p><strong>Titolare del trattamento.</strong> <span class="manca">Denominazione e dati di contatto da completare</span> — Via Alcide De Gasperi 2/11, 31044 Montebelluna (TV).</p>
+          <p><strong>Quali dati raccogliamo.</strong> Solo quelli del modulo di prenotazione: nome, numero di telefono, data e ora desiderate, numero di persone e le note che scrivete voi (per esempio allergie o intolleranze). Non raccogliamo altro e non chiediamo dati che non servano a tenervi il tavolo.</p>
+          <p><strong>Perché li trattiamo.</strong> Unicamente per gestire e confermare la vostra richiesta di prenotazione. Non li usiamo per inviarvi comunicazioni commerciali.</p>
+          <p><strong>Base giuridica.</strong> Il vostro consenso, che date spuntando la casella nel modulo, e l'esecuzione di misure precontrattuali richieste da voi (art. 6.1.a e 6.1.b GDPR). Le informazioni su allergie e intolleranze sono dati relativi alla salute: le trattiamo solo se le scrivete voi e soltanto per prepararvi il pasto in sicurezza.</p>
+          <p><strong>Per quanto tempo.</strong> Il tempo necessario a gestire la prenotazione e comunque non oltre <span class="manca">indicare il periodo, per esempio 30 giorni</span> dalla data prevista, salvo obblighi di legge.</p>
+          <p><strong>A chi li comunichiamo.</strong> A nessuno. Non trasferiamo i vostri dati fuori dall'Unione Europea e non li vendiamo.</p>
+          <p><strong>I vostri diritti.</strong> Potete chiedere in qualsiasi momento di accedere ai vostri dati, correggerli, cancellarli, limitarne il trattamento, opporvi o revocare il consenso. Scriveteci ai contatti qui sopra. Potete anche presentare reclamo al Garante per la protezione dei dati personali (<span class="nowrap">garanteprivacy.it</span>).</p>
+          <p class="legale__avviso"><strong>Da sistemare prima della pubblicazione:</strong> il modulo di prenotazione di questo sito al momento non invia nulla a nessuno. Quando verrà collegato a un indirizzo email o a un servizio, questa informativa va aggiornata indicando dove finiscono i dati e chi altro li tratta.</p>
+        </div>
+      </details>
+
+      <details class="legale__voce" id="cookie">
+        <summary>Cookie e tracciamento</summary>
+        <div class="legale__testo">
+          <p><strong>Questo sito non usa cookie.</strong> Non installiamo cookie tecnici propri, non usiamo cookie di profilazione, non abbiamo statistiche né pixel pubblicitari. Per questo non trovate un banner di consenso: non c'è nulla da consentire.</p>
+          <p><strong>Un servizio esterno c'è.</strong> I caratteri tipografici della pagina sono caricati dai server di Google Fonts. Nel farlo il vostro browser comunica a Google il proprio indirizzo IP. Non vengono installati cookie, ma è comunque una comunicazione di dati a un soggetto terzo.</p>
+          <p class="legale__avviso"><strong>Raccomandazione:</strong> conviene ospitare i caratteri direttamente sul sito, così nessun dato lascia il server. È una modifica tecnica di poco conto ed elimina del tutto la questione.</p>
+        </div>
+      </details>
+
+      <details class="legale__voce" id="condizioni">
+        <summary>Condizioni di prenotazione</summary>
+        <div class="legale__testo">
+          <p><strong>La prenotazione è obbligatoria</strong>, con almeno un giorno di anticipo. La spesa e la preparazione vengono fatte su misura per gli ospiti attesi.</p>
+          <p><strong>Come si conferma.</strong> Il modulo del sito è una richiesta, non una prenotazione confermata. Vale come confermata solo dopo la nostra risposta su WhatsApp o per telefono.</p>
+          <p><strong>Disdette.</strong> Se non potete venire, avvisateci appena possibile e comunque entro <span class="manca">indicare il termine</span>. Non chiediamo caparre e non tratteniamo somme: sul sito non si paga nulla, quindi non ci sono rimborsi da gestire.</p>
+          <p><strong>Allergie e intolleranze.</strong> Segnalatecele al momento della prenotazione. Le informazioni sugli allergeni presenti nei nostri piatti sono disponibili in sala, come previsto dal Regolamento UE 1169/2011.</p>
+          <p><strong>Prezzi e piatti.</strong> Il piatto unico cambia di sera in sera. I piatti mostrati sul sito sono quelli che proponiamo più spesso, ma la disponibilità della singola serata viene confermata al momento della prenotazione.</p>
+          <p class="legale__avviso"><strong>Da completare:</strong> termine per le disdette e, se lo prevedete, il comportamento in caso di mancata presentazione.</p>
+        </div>
+      </details>
+
+      <details class="legale__voce" id="crediti">
+        <summary>Crediti fotografici</summary>
+        <div class="legale__testo">
+          <p class="legale__avviso"><strong>Verifica necessaria.</strong> Le fotografie dei piatti attualmente sul sito provengono da fonti esterne e non risultano scattate dal ristorante. Alcune portavano la firma visibile di altri autori. Prima di pubblicare il sito su un dominio pubblico occorre sostituirle con fotografie proprie, oppure ottenere una licenza d'uso da chi le ha scattate.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
 </main>
 
 <footer class="piede">
   <div class="shell piede__inner">
     <span>© <span id="anno"></span> Ristorante Persian Home — Montebelluna (TV)</span>
-    <span>Sito dimostrativo creato a scopo di test.</span>
+    <nav class="piede__link" aria-label="Note legali">
+      <a href="#privacy">Privacy</a>
+      <a href="#cookie">Cookie</a>
+      <a href="#condizioni">Condizioni di prenotazione</a>
+      <a href="#legale">Dati dell'attività</a>
+    </nav>
   </div>
 </footer>
 
 <script>
+document.documentElement.lang = 'it';
 document.getElementById('anno').textContent = new Date().getFullYear();
 
 /* --- navigazione mobile --- */
@@ -1287,9 +1427,15 @@ const esito = document.getElementById('esito');
 
 modulo.addEventListener('submit', (e) => {
   e.preventDefault();
-  const mancante = Array.from(modulo.querySelectorAll('[required]')).find((c) => !c.value.trim());
+  const vuoto = (c) => (c.type === 'checkbox' ? !c.checked : !c.value.trim());
+  const mancante = Array.from(modulo.querySelectorAll('[required]')).find(vuoto);
   if (mancante) {
-    esito.textContent = 'Compilate ' + mancante.closest('.field').querySelector('span').textContent.split('—')[0].trim().toLowerCase() + ' per inviare la richiesta.';
+    if (mancante.type === 'checkbox') {
+      esito.textContent = 'Per inviare la richiesta serve il consenso al trattamento dei dati.';
+    } else {
+      const nome = mancante.closest('.field').querySelector('span').textContent.split('—')[0].trim();
+      esito.textContent = 'Compilate ' + nome.toLowerCase() + ' per inviare la richiesta.';
+    }
     mancante.focus();
     return;
   }
