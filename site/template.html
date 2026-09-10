@@ -399,17 +399,59 @@ p { margin: 0; }
 .tab:hover { color: var(--linen); }
 .tab[aria-selected="true"] { color: var(--saffron); border-bottom-color: var(--saffron); }
 
-.dishes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--s-4) var(--s-3);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.dishes[hidden] { display: none; }
+/* Riga scorrevole: si trascina col dito, con le frecce o con le
+   frecce della tastiera quando la riga ha il fuoco. */
+.carosello { position: relative; }
 
-.dish { display: grid; gap: 12px; align-content: start; }
+.dishes {
+  display: flex;
+  gap: var(--s-3);
+  margin: 0;
+  /* il padding lascia respirare l'alone del telaio, che uscirebbe tagliato */
+  padding: 6px 2px 20px;
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--neon-rgb), 0.55) transparent;
+}
+.dishes::-webkit-scrollbar { height: 6px; }
+.dishes::-webkit-scrollbar-track { background: rgba(240, 234, 219, 0.07); border-radius: 99px; }
+.dishes::-webkit-scrollbar-thumb { background: rgba(var(--neon-rgb), 0.55); border-radius: 99px; }
+.dishes:focus-visible { outline-offset: -2px; }
+
+.dish {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.freccia {
+  position: absolute;
+  top: 118px;                /* centro del riquadro 4:3 di una scheda da 300px */
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(var(--neon-rgb), 0.55);
+  border-radius: 50%;
+  background: rgba(11, 16, 34, 0.86);
+  backdrop-filter: blur(6px);
+  color: var(--linen);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+.freccia svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.freccia:hover { background: rgba(var(--neon-rgb), 0.9); border-color: transparent; color: var(--night); }
+.freccia:disabled { opacity: 0.25; cursor: default; }
+.freccia:disabled:hover { background: rgba(11, 16, 34, 0.86); color: var(--linen); border-color: rgba(var(--neon-rgb), 0.55); }
+.freccia--sx { left: -14px; }
+.freccia--dx { right: -14px; }
 
 .dish__img {
   padding: 5px;
@@ -642,8 +684,9 @@ p { margin: 0; }
     gap: var(--s-5);
   }
   .hero__plate, .storia__plate { justify-self: start; }
-  .dishes { grid-template-columns: repeat(2, 1fr); }
   .tratti { grid-template-columns: repeat(2, 1fr); }
+  .freccia--sx { left: 0; }
+  .freccia--dx { right: 0; }
   .band { padding-block: var(--s-5); }
 }
 
@@ -667,10 +710,17 @@ p { margin: 0; }
   .nav__cta { text-align: center; }
 
   .serata__grid { grid-template-columns: 1fr; gap: var(--s-3); }
-  .dishes { grid-template-columns: 1fr; }
+  .dish { flex-basis: 78vw; }
+  .dishes { padding-bottom: 16px; }
   .form__row { grid-template-columns: 1fr; }
   .form { padding: var(--s-3); }
   body { font-size: 16px; }
+}
+
+/* Col dito si scorre direttamente: le frecce servono a mouse e tastiera,
+   quindi spariscono sul touch e non sotto una certa larghezza. */
+@media (hover: none) and (pointer: coarse) {
+  .freccia { display: none; }
 }
 
 @media (max-width: 400px) {
@@ -791,7 +841,8 @@ p { margin: 0; }
       </div>
 
       <!-- Antipasti -->
-      <ul class="dishes" id="p-antipasti" role="tabpanel" aria-labelledby="tab-antipasti" data-panel="antipasti">
+      <div class="carosello" id="p-antipasti" role="tabpanel" aria-labelledby="tab-antipasti" data-panel="antipasti">
+        <ul class="dishes">
 
         <li class="dish">
           <div class="dish__img"><img src="{{PHOTO:kashk-bademjan}}" alt="Kashk-e Bademjan, crema di melanzane" loading="lazy"></div>
@@ -828,10 +879,18 @@ p { margin: 0; }
           <div class="dish__head"><h3>Involtini di melanzane</h3><span class="fa" lang="fa">بادمجان</span></div>
           <p>Melanzane, noci, cacio e pepe, menta, con pane tipico.</p>
         </li>
-      </ul>
+        </ul>
+      <button class="freccia freccia--sx" type="button" data-dir="-1" aria-label="Piatti precedenti">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+      </button>
+      <button class="freccia freccia--dx" type="button" data-dir="1" aria-label="Piatti successivi">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+      </button>
+      </div>
 
       <!-- Piatto unico -->
-      <ul class="dishes" id="p-principali" role="tabpanel" aria-labelledby="tab-principali" data-panel="principali" hidden>
+      <div class="carosello" id="p-principali" role="tabpanel" aria-labelledby="tab-principali" data-panel="principali" hidden>
+        <ul class="dishes">
 
         <li class="dish">
           <div class="dish__img"><img src="{{PHOTO:zereshk-polo}}" alt="Zereshk Polo con pollo e bacche di crespino" loading="lazy"></div>
@@ -893,10 +952,18 @@ p { margin: 0; }
           <div class="dish__head"><h3>Chelo Berenj</h3><span class="fa" lang="fa">چلو برنج</span></div>
           <p>Riso basmati allo zafferano, semi di crispino e carne di vitello.</p>
         </li>
-      </ul>
+        </ul>
+      <button class="freccia freccia--sx" type="button" data-dir="-1" aria-label="Piatti precedenti">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+      </button>
+      <button class="freccia freccia--dx" type="button" data-dir="1" aria-label="Piatti successivi">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+      </button>
+      </div>
 
       <!-- Insalate -->
-      <ul class="dishes" id="p-insalate" role="tabpanel" aria-labelledby="tab-insalate" data-panel="insalate" hidden>
+      <div class="carosello" id="p-insalate" role="tabpanel" aria-labelledby="tab-insalate" data-panel="insalate" hidden>
+        <ul class="dishes">
 
         <li class="dish">
           <div class="dish__img"><img src="{{PHOTO:insalata-stagione}}" alt="Insalata di stagione con salsa della casa" loading="lazy"></div>
@@ -918,10 +985,18 @@ p { margin: 0; }
           <div class="dish__head"><h3>Insalata di cappuccio</h3><span class="fa" lang="fa">سالاد کلم</span></div>
           <p>Cappuccio bianco, cetriolini, melograno e salsa speciale.</p>
         </li>
-      </ul>
+        </ul>
+      <button class="freccia freccia--sx" type="button" data-dir="-1" aria-label="Piatti precedenti">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+      </button>
+      <button class="freccia freccia--dx" type="button" data-dir="1" aria-label="Piatti successivi">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+      </button>
+      </div>
 
       <!-- Vegetariano -->
-      <ul class="dishes" id="p-vegetariano" role="tabpanel" aria-labelledby="tab-vegetariano" data-panel="vegetariano" hidden>
+      <div class="carosello" id="p-vegetariano" role="tabpanel" aria-labelledby="tab-vegetariano" data-panel="vegetariano" hidden>
+        <ul class="dishes">
 
         <li class="dish">
           <div class="dish__img"><img src="{{PHOTO:adas-polo}}" alt="Adas Polo, riso con lenticchie e uvetta" loading="lazy"></div>
@@ -948,10 +1023,18 @@ p { margin: 0; }
           <div class="dish__head"><h3>Baghali Polo <span class="tag">veg</span></h3><span class="fa" lang="fa">باقالی پلو</span></div>
           <p>Riso, zafferano, fave, aneto e soja.</p>
         </li>
-      </ul>
+        </ul>
+      <button class="freccia freccia--sx" type="button" data-dir="-1" aria-label="Piatti precedenti">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+      </button>
+      <button class="freccia freccia--dx" type="button" data-dir="1" aria-label="Piatti successivi">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+      </button>
+      </div>
 
       <!-- Dolci -->
-      <ul class="dishes" id="p-dolci" role="tabpanel" aria-labelledby="tab-dolci" data-panel="dolci" hidden>
+      <div class="carosello" id="p-dolci" role="tabpanel" aria-labelledby="tab-dolci" data-panel="dolci" hidden>
+        <ul class="dishes">
 
         <li class="dish">
           <div class="dish__img"><img src="{{PHOTO:sholezard}}" alt="Sholezard, budino di riso allo zafferano" loading="lazy"></div>
@@ -973,7 +1056,14 @@ p { margin: 0; }
           <div class="dish__head"><h3>Cheesecake</h3></div>
           <p>Una porzione di cheesecake al limone, cioccolata, fragole oppure melograno.</p>
         </li>
-      </ul>
+        </ul>
+      <button class="freccia freccia--sx" type="button" data-dir="-1" aria-label="Piatti precedenti">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+      </button>
+      <button class="freccia freccia--dx" type="button" data-dir="1" aria-label="Piatti successivi">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+      </button>
+      </div>
 
       <div class="incluso">
         <h3>Sempre incluso nel menu fisso</h3>
@@ -1127,12 +1217,49 @@ window.matchMedia('(max-width: 720px)').addEventListener('change', chiudiNav);
 
 /* --- schede del menu --- */
 const tabs = Array.from(document.querySelectorAll('.tab'));
-const panels = Array.from(document.querySelectorAll('.dishes'));
+const panels = Array.from(document.querySelectorAll('.carosello'));
 
 function mostra(nome) {
   tabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === nome)));
-  panels.forEach((p) => { p.hidden = p.dataset.panel !== nome; });
+  panels.forEach((p) => {
+    p.hidden = p.dataset.panel !== nome;
+    if (!p.hidden) aggiornaFrecce(p);
+  });
 }
+
+/* --- righe scorrevoli --- */
+function aggiornaFrecce(carosello) {
+  const riga = carosello.querySelector('.dishes');
+  const resto = riga.scrollWidth - riga.clientWidth;
+  // margine di qualche pixel: lo snap si ferma dopo il padding della riga, e
+  // zoom e schermi a densita' frazionaria lasciano resti sotto il pixel
+  const tolleranza = 6;
+  carosello.querySelector('.freccia--sx').disabled = riga.scrollLeft <= tolleranza;
+  carosello.querySelector('.freccia--dx').disabled = riga.scrollLeft >= resto - tolleranza;
+}
+
+panels.forEach((carosello) => {
+  const riga = carosello.querySelector('.dishes');
+  const passo = () => {
+    const scheda = riga.querySelector('.dish');
+    const largo = scheda ? scheda.getBoundingClientRect().width + 24 : 320;
+    // avanza di quante schede sono visibili, tenendone una a vista
+    return Math.max(1, Math.floor(riga.clientWidth / largo) - 1) * largo;
+  };
+
+  carosello.querySelectorAll('.freccia').forEach((b) => {
+    b.addEventListener('click', () => {
+      riga.scrollBy({ left: Number(b.dataset.dir) * passo(), behavior: 'smooth' });
+    });
+  });
+
+  riga.addEventListener('scroll', () => aggiornaFrecce(carosello), { passive: true });
+  aggiornaFrecce(carosello);
+});
+
+window.addEventListener('resize', () => {
+  panels.forEach((p) => { if (!p.hidden) aggiornaFrecce(p); });
+});
 
 tabs.forEach((tab, i) => {
   tab.addEventListener('click', () => mostra(tab.dataset.tab));
