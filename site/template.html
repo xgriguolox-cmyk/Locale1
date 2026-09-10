@@ -1,0 +1,1135 @@
+<title>Persian Home Montebelluna</title>
+<meta name="description" content="Ristorante Persian Home a Montebelluna (TV): cucina persiana autentica, menu fisso preparato al momento da Parvaneh e Hosein. Prenotazione obbligatoria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Karla:wght@400;500;600;700&family=Vazirmatn:wght@400;500&display=swap">
+
+<style>
+/* ============================================================
+   Persian Home — "sera persiana"
+   Un solo mondo visivo: indigo notte, lino, zafferano.
+   Il ristorante apre solo di sera: la pagina vive di notte.
+   ============================================================ */
+
+:root {
+  color-scheme: dark;
+
+  --night:      #0B1022;
+  --night-2:    #131A30;
+  --night-3:    #1B2340;
+  --linen:      #F0EADB;
+  --linen-dim:  #A9B0C6;
+  --saffron:    #E4A93C;
+  --saffron-dim:#C98F2A;
+  --rose:       #CE8578;
+
+  --line:       rgba(228, 169, 60, 0.24);
+  --line-soft:  rgba(240, 234, 219, 0.12);
+
+  --measure: 62ch;
+  --shell: 1120px;
+
+  --s-1: 8px;
+  --s-2: 16px;
+  --s-3: 24px;
+  --s-4: 40px;
+  --s-5: 64px;
+  --s-6: 96px;
+  --s-7: 128px;
+
+  --f-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --f-body: "Karla", system-ui, -apple-system, sans-serif;
+  --f-fa: "Vazirmatn", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--linen);
+  font-family: var(--f-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-optical-sizing: auto;
+  text-wrap: balance;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+p { margin: 0; }
+
+.shell {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.band { padding-block: var(--s-6); }
+.band--tight { padding-block: var(--s-5); }
+
+/* ---- etichette e filetti --------------------------------- */
+
+.label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  margin: 0 0 var(--s-2);
+}
+
+.fa {
+  font-family: var(--f-fa);
+  font-weight: 400;
+  color: var(--saffron-dim);
+  direction: rtl;
+}
+
+.rule {
+  height: 1px;
+  border: 0;
+  margin: 0;
+  background: linear-gradient(90deg, var(--line), transparent);
+}
+
+/* ---- header ---------------------------------------------- */
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(11, 16, 34, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.masthead__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding-block: 14px;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: var(--f-display);
+  font-size: 1.18rem;
+  letter-spacing: 0.01em;
+}
+.wordmark img { width: 30px; height: auto; }
+.wordmark em { font-style: normal; color: var(--saffron); }
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.92rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--linen-dim);
+  padding-block: 6px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.nav a:hover { color: var(--linen); border-bottom-color: var(--saffron); }
+
+.nav__cta {
+  color: var(--night) !important;
+  background: var(--saffron);
+  padding: 9px 20px;
+  border-radius: 2px;
+  font-weight: 600;
+  border-bottom: 0 !important;
+  transition: background 0.2s ease;
+}
+.nav__cta:hover { background: #F2BC55; }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 1px solid var(--line-soft);
+  border-radius: 2px;
+  padding: 10px;
+  cursor: pointer;
+}
+.burger span { display: block; width: 20px; height: 1.5px; background: var(--linen); }
+
+/* ---- hero ------------------------------------------------ */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 70% at 78% 30%, rgba(228, 169, 60, 0.13), transparent 70%),
+    radial-gradient(50% 60% at 10% 90%, rgba(206, 133, 120, 0.10), transparent 70%);
+  pointer-events: none;
+}
+
+.hero__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--s-6);
+  align-items: center;
+  padding-block: var(--s-6);
+}
+
+.hero__greeting {
+  font-family: var(--f-fa);
+  font-size: 1.5rem;
+  color: var(--saffron);
+  direction: rtl;
+  margin-bottom: 6px;
+}
+
+.hero h1 {
+  font-size: clamp(2.9rem, 6.5vw, 4.4rem);
+  line-height: 1.02;
+  margin-bottom: var(--s-3);
+}
+.hero h1 span { display: block; color: var(--saffron); font-style: italic; font-weight: 300; }
+
+.hero__lede {
+  max-width: 46ch;
+  color: var(--linen-dim);
+  font-size: 1.08rem;
+  margin-bottom: var(--s-4);
+}
+
+.hero__actions { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+
+.hero__note {
+  margin-top: var(--s-3);
+  font-size: 0.86rem;
+  color: var(--linen-dim);
+}
+
+/* piatto in cornice: tenuto vicino alla risoluzione nativa
+   delle foto (~370px) per non sgranare */
+.hero__plate {
+  justify-self: center;
+  max-width: 400px;
+  width: 100%;
+}
+.hero__plate figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  padding: 10px;
+  background: var(--night-2);
+}
+.hero__plate img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.hero__plate figcaption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2);
+  padding: 12px 4px 2px;
+  font-size: 0.82rem;
+  color: var(--linen-dim);
+}
+.hero__plate figcaption .fa { font-size: 0.95rem; }
+
+/* ---- bottoni --------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 26px;
+  border-radius: 2px;
+  font-family: var(--f-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn--primary { background: var(--saffron); color: var(--night); }
+.btn--primary:hover { background: #F2BC55; }
+
+.btn--ghost { border-color: var(--line); color: var(--linen); background: none; }
+.btn--ghost:hover { border-color: var(--saffron); color: var(--saffron); }
+
+/* ---- la serata (sequenza reale in 3 tempi) ---------------- */
+
+.serata { border-bottom: 1px solid var(--line-soft); }
+
+.serata__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-4);
+}
+
+.tempo { display: grid; gap: 10px; align-content: start; }
+
+.tempo__n {
+  font-family: var(--f-display);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--saffron);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  font-variant-numeric: tabular-nums;
+}
+.tempo h3 { font-size: 1.28rem; }
+.tempo p { color: var(--linen-dim); font-size: 0.95rem; }
+
+/* ---- storia ---------------------------------------------- */
+
+.storia__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.82fr;
+  gap: var(--s-6);
+  align-items: center;
+}
+
+.storia h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom: var(--s-3); }
+.storia p { color: var(--linen-dim); max-width: var(--measure); }
+.storia p + p { margin-top: var(--s-2); }
+
+.firma {
+  margin-top: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line-soft);
+  display: grid;
+  gap: 4px;
+}
+.firma strong { font-family: var(--f-display); font-weight: 500; font-size: 1.05rem; }
+.firma span { font-size: 0.86rem; color: var(--linen-dim); }
+
+.storia__plate { justify-self: center; max-width: 380px; width: 100%; }
+.storia__plate figure { margin: 0; border: 1px solid var(--line); padding: 10px; background: var(--night-2); }
+.storia__plate img { aspect-ratio: 1 / 1; object-fit: cover; width: 100%; }
+.storia__plate figcaption { padding: 12px 4px 2px; font-size: 0.82rem; color: var(--linen-dim); }
+
+/* ---- menu ------------------------------------------------ */
+
+.menu { background: var(--night-2); border-block: 1px solid var(--line-soft); }
+
+.menu__head { max-width: 60ch; margin-bottom: var(--s-4); }
+.menu__head h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom: var(--s-2); }
+.menu__head p { color: var(--linen-dim); }
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.tab {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--linen-dim);
+  font-family: var(--f-body);
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 10px 2px 12px;
+  min-height: 44px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.tab:hover { color: var(--linen); }
+.tab[aria-selected="true"] { color: var(--saffron); border-bottom-color: var(--saffron); }
+
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-4) var(--s-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dishes[hidden] { display: none; }
+
+.dish { display: grid; gap: 12px; align-content: start; }
+
+.dish__img {
+  border: 1px solid var(--line-soft);
+  padding: 6px;
+  background: var(--night);
+  transition: border-color 0.25s ease;
+}
+.dish__img img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.dish:hover .dish__img { border-color: var(--line); }
+
+.dish__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-2); }
+.dish h3 { font-size: 1.12rem; line-height: 1.25; }
+.dish__head .fa { font-size: 0.95rem; white-space: nowrap; }
+.dish p { font-size: 0.9rem; color: var(--linen-dim); line-height: 1.55; }
+
+.dish--noimg .dish__img {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  padding: var(--s-3);
+  text-align: center;
+}
+.dish--noimg .dish__img span {
+  font-family: var(--f-display);
+  font-style: italic;
+  color: var(--saffron-dim);
+  font-size: 0.95rem;
+}
+
+.tag {
+  font-family: var(--f-body);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 2px 7px;
+  white-space: nowrap;
+  vertical-align: 2px;
+}
+
+.incluso {
+  margin-top: var(--s-5);
+  padding: var(--s-3) var(--s-4);
+  border-left: 2px solid var(--saffron);
+  background: rgba(228, 169, 60, 0.05);
+  display: grid;
+  gap: 6px;
+}
+.incluso h3 { font-size: 1.1rem; }
+.incluso p { color: var(--linen-dim); max-width: var(--measure); font-size: 0.95rem; }
+
+/* ---- esperienza ------------------------------------------ */
+
+.esperienza h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom: var(--s-4); max-width: 20ch; }
+
+.tratti {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-4) var(--s-3);
+}
+
+.tratto { display: grid; gap: 10px; align-content: start; }
+.tratto svg { width: 30px; height: 30px; stroke: var(--saffron); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.tratto h3 { font-size: 1.08rem; }
+.tratto p { font-size: 0.9rem; color: var(--linen-dim); }
+
+/* ---- voci degli ospiti ----------------------------------- */
+
+.voci { background: var(--night-2); border-block: 1px solid var(--line-soft); }
+
+.voci__grid {
+  display: grid;
+  grid-template-columns: 0.65fr 1.35fr;
+  gap: var(--s-6);
+  align-items: center;
+}
+
+.punteggi { display: grid; gap: var(--s-3); }
+.punteggio { display: grid; gap: 2px; }
+.punteggio strong {
+  font-family: var(--f-display);
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--saffron);
+  font-variant-numeric: tabular-nums;
+}
+.punteggio strong small { font-size: 1.1rem; color: var(--linen-dim); }
+.punteggio span { font-size: 0.84rem; color: var(--linen-dim); }
+
+.citazione { margin: 0; display: grid; gap: var(--s-3); }
+.citazione p {
+  font-family: var(--f-display);
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  font-weight: 300;
+  line-height: 1.42;
+  text-wrap: balance;
+}
+.citazione footer { font-size: 0.86rem; color: var(--linen-dim); }
+.citazione footer a { color: var(--saffron); }
+
+/* ---- prenotazioni ---------------------------------------- */
+
+.prenota__grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: var(--s-6);
+  align-items: start;
+}
+
+.prenota h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom: var(--s-3); }
+.prenota__intro { color: var(--linen-dim); max-width: 46ch; }
+.prenota__intro strong { color: var(--linen); }
+
+.diretto {
+  margin-top: var(--s-4);
+  display: grid;
+  gap: var(--s-1);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line-soft);
+}
+.diretto a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--linen);
+  transition: color 0.2s ease;
+}
+.diretto a:hover { color: var(--saffron); }
+.diretto svg { width: 18px; height: 18px; stroke: var(--saffron); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+.form {
+  display: grid;
+  gap: var(--s-3);
+  border: 1px solid var(--line-soft);
+  padding: var(--s-4);
+  background: var(--night-2);
+}
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3); }
+
+.field { display: grid; gap: 7px; }
+.field > span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--linen-dim); }
+.field small { font-size: 0.8rem; color: var(--linen-dim); font-weight: 400; letter-spacing: 0; text-transform: none; }
+
+.form input, .form textarea {
+  min-height: 46px;
+  background: var(--night);
+  border: 1px solid var(--line-soft);
+  border-radius: 2px;
+  color: var(--linen);
+  font-family: var(--f-body);
+  font-size: 1rem;
+  padding: 11px 13px;
+  resize: vertical;
+}
+.form input:hover, .form textarea:hover { border-color: var(--line); }
+.form input:focus, .form textarea:focus { border-color: var(--saffron); outline-offset: 1px; }
+.form textarea { min-height: 84px; }
+
+.form__note { font-size: 0.88rem; color: var(--saffron); min-height: 1.5em; margin: 0; }
+
+/* ---- contatti -------------------------------------------- */
+
+.contatti { border-top: 1px solid var(--line-soft); }
+.contatti h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom: var(--s-4); }
+
+.contatti__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-6); align-items: start; }
+
+.dati { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+.dati li { display: grid; gap: 3px; }
+.dati dt, .dati strong {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--saffron);
+}
+.dati span, .dati a { color: var(--linen); text-decoration: none; }
+.dati a:hover { color: var(--saffron); }
+
+.mappa {
+  display: grid;
+  gap: 14px;
+  align-content: center;
+  justify-items: start;
+  min-height: 260px;
+  padding: var(--s-4);
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(70% 90% at 80% 20%, rgba(228, 169, 60, 0.10), transparent 70%),
+    var(--night-2);
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+.mappa:hover { border-color: var(--saffron); }
+.mappa svg { width: 30px; height: 30px; stroke: var(--saffron); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.mappa strong { font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; }
+.mappa span { font-size: 0.9rem; color: var(--linen-dim); }
+.mappa em { font-style: normal; font-size: 0.84rem; font-weight: 600; color: var(--saffron); }
+
+/* ---- footer ---------------------------------------------- */
+
+.piede {
+  border-top: 1px solid var(--line-soft);
+  padding-block: var(--s-4);
+  font-size: 0.82rem;
+  color: var(--linen-dim);
+}
+.piede__inner { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4); justify-content: space-between; }
+
+/* ---- responsive ------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .hero__grid, .storia__grid, .voci__grid, .prenota__grid, .contatti__grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-5);
+  }
+  .hero__plate, .storia__plate { justify-self: start; }
+  .dishes { grid-template-columns: repeat(2, 1fr); }
+  .tratti { grid-template-columns: repeat(2, 1fr); }
+  .band { padding-block: var(--s-5); }
+}
+
+@media (max-width: 720px) {
+  .burger { display: flex; }
+  .nav {
+    display: none;
+    position: absolute;
+    inset: 100% 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--night);
+    border-bottom: 1px solid var(--line-soft);
+    padding: var(--s-2) 24px var(--s-3);
+  }
+  .nav--open { display: flex; }
+  .nav li { border-bottom: 1px solid var(--line-soft); }
+  .nav li:last-child { border-bottom: 0; padding-top: var(--s-2); }
+  .nav a { display: block; padding-block: 14px; }
+  .nav__cta { text-align: center; }
+
+  .serata__grid { grid-template-columns: 1fr; gap: var(--s-3); }
+  .dishes { grid-template-columns: 1fr; }
+  .form__row { grid-template-columns: 1fr; }
+  .form { padding: var(--s-3); }
+  body { font-size: 16px; }
+}
+
+@media (max-width: 400px) {
+  .shell { padding-inline: 18px; }
+  .nav { padding-inline: 18px; }
+}
+</style>
+
+<header class="masthead" id="cima">
+  <div class="shell masthead__inner">
+    <a class="wordmark" href="#cima">
+      <img src="{{PHOTO:logo}}" alt="">
+      Persian <em>Home</em>
+    </a>
+    <button class="burger" id="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav" id="nav">
+      <li><a href="#storia">Storia</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#esperienza">La sera</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+      <li><a class="nav__cta" href="#prenota">Prenota</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="shell hero__grid">
+      <div>
+        <p class="hero__greeting" lang="fa">خوش آمدید</p>
+        <h1>Persian Home<span>una casa persiana a Montebelluna</span></h1>
+        <p class="hero__lede">Apriamo solo la sera, per un numero limitato di tavoli. Un menu fisso in tre tempi, cucinato al momento da Parvaneh e Hosein, che inizia come inizia ogni sera in Iran: con un tè caldo.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#prenota">Prenota un tavolo</a>
+          <a class="btn btn--ghost" href="#menu">Guarda il menu</a>
+        </div>
+        <p class="hero__note">Prenotazione obbligatoria, almeno un giorno prima &middot; Tutti i giorni fino alle 23:00</p>
+      </div>
+
+      <div class="hero__plate">
+        <figure>
+          <img src="{{PHOTO:sholezard}}" alt="Sholezard, budino di riso allo zafferano decorato con cannella, mandorle e pistacchio" width="400" height="300">
+          <figcaption>
+            <span>Sholezard, il nostro dolce allo zafferano</span>
+            <span class="fa" lang="fa">شله‌زرد</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LA SERATA: sequenza reale in tre tempi ============ -->
+  <section class="serata band--tight">
+    <div class="shell">
+      <p class="label">Come si mangia da noi</p>
+      <div class="serata__grid">
+        <div class="tempo">
+          <p class="tempo__n">Primo tempo</p>
+          <h3>Antipasto</h3>
+          <p>Si comincia dalla tavola condivisa: melanzane, erbe, yogurt e pane tipico, con il tè di benvenuto nei bicchierini estekan.</p>
+        </div>
+        <div class="tempo">
+          <p class="tempo__n">Secondo tempo</p>
+          <h3>Piatto unico</h3>
+          <p>Un solo grande piatto, scelto fra quelli della sera: riso basmati allo zafferano con carne, pesce o verdure, cotto lentamente.</p>
+        </div>
+        <div class="tempo">
+          <p class="tempo__n">Terzo tempo</p>
+          <h3>Dolce e tè</h3>
+          <p>Dolcetti fatti in casa e tè caldo d'inverno; d'estate lo sharbat, la bevanda fresca della tradizione persiana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORIA ============ -->
+  <section class="storia band" id="storia">
+    <div class="shell storia__grid">
+      <div>
+        <p class="label">La nostra storia</p>
+        <h2>Non è un ristorante che imita la Persia. È una casa persiana che cucina.</h2>
+        <p>Persian Home nasce dal desiderio di Parvaneh e Hosein di portare a Montebelluna la cucina con cui sono cresciuti: riso basmati profumato allo zafferano, carni marinate e cotte lentamente, erbe fresche usate a mani piene come si fa in ogni cucina iraniana.</p>
+        <p>Qui non esistono piatti pronti. Ogni ricetta viene preparata la sera stessa, per gli ospiti che hanno prenotato — ed è per questo che vi chiediamo un giorno di anticipo. Il resto lo fa l'accoglienza: la stessa che ricevereste entrando in casa loro.</p>
+        <div class="firma">
+          <strong>Parvaneh e Hosein</strong>
+          <span>In cucina e in sala, tutte le sere</span>
+        </div>
+      </div>
+
+      <div class="storia__plate">
+        <figure>
+          <img src="{{PHOTO:dolcetti}}" alt="Vassoio di dolcetti persiani fatti in casa con sesamo e pistacchio" width="380" height="380">
+          <figcaption>I dolcetti che Parvaneh prepara ogni giorno</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu band" id="menu">
+    <div class="shell">
+      <div class="menu__head">
+        <p class="label">Il menu</p>
+        <h2>I piatti della sera</h2>
+        <p>Il menu è fisso: antipasto, un piatto unico a scelta, dolce e tè. La scelta del piatto unico cambia sera per sera — questi sono i protagonisti che tornano più spesso in tavola.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Categorie del menu">
+        <button class="tab" id="tab-antipasti" type="button" role="tab" aria-selected="true" aria-controls="p-antipasti" data-tab="antipasti">Antipasti</button>
+        <button class="tab" id="tab-principali" type="button" role="tab" aria-selected="false" aria-controls="p-principali" data-tab="principali">Piatto unico</button>
+        <button class="tab" id="tab-insalate" type="button" role="tab" aria-selected="false" aria-controls="p-insalate" data-tab="insalate">Insalate</button>
+        <button class="tab" id="tab-vegetariano" type="button" role="tab" aria-selected="false" aria-controls="p-vegetariano" data-tab="vegetariano">Vegetariano</button>
+        <button class="tab" id="tab-dolci" type="button" role="tab" aria-selected="false" aria-controls="p-dolci" data-tab="dolci">Dolci</button>
+      </div>
+
+      <!-- Antipasti -->
+      <ul class="dishes" id="p-antipasti" role="tabpanel" aria-labelledby="tab-antipasti" data-panel="antipasti">
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:involtini}}" alt="Involtini di melanzane con noci e menta" loading="lazy"></div>
+          <div class="dish__head"><h3>Involtini di melanzane</h3><span class="fa" lang="fa">بادمجان</span></div>
+          <p>Melanzane, noci, cacio e pepe, menta, con pane tipico.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:dolmeh}}" alt="Dolmeh, foglie di vite ripiene" loading="lazy"></div>
+          <div class="dish__head"><h3>Dolmeh</h3><span class="fa" lang="fa">دلمه</span></div>
+          <p>Foglia d'uva, carne macinata, riso, erbe aromatiche, cotiledone e cipolla.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:kashk-bademjan}}" alt="Kashk-e Bademjan, crema di melanzane" loading="lazy"></div>
+          <div class="dish__head"><h3>Kashk-e Bademjan</h3><span class="fa" lang="fa">کشک بادمجان</span></div>
+          <p>Melanzane, cipolla, noci, menta, cacio e pepe.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:mirza-ghasemi}}" alt="Mirza Ghasemi, melanzane affumicate con uova e pomodoro" loading="lazy"></div>
+          <div class="dish__head"><h3>Mirza Ghasemi</h3><span class="fa" lang="fa">میرزا قاسمی</span></div>
+          <p>Melanzane, uova, pomodori e aglio.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:kuku-sabzi}}" alt="Kuku Sabzi, frittata alle erbe persiana" loading="lazy"></div>
+          <div class="dish__head"><h3>Kuku Sabzi</h3><span class="fa" lang="fa">کوکو سبزی</span></div>
+          <p>Uova, farina, prezzemolo, aglio, erba cipollina e coriandolo.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:ash-jo}}" alt="Ash-e Jo, zuppa d'orzo persiana" loading="lazy"></div>
+          <div class="dish__head"><h3>Zuppa di orzo <span class="tag">inverno</span></h3><span class="fa" lang="fa">آش جو</span></div>
+          <p>Orzo, erba cipollina, carote, cipolla, funghi, latte e panna.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:mast-o-khiar}}" alt="Mast-o Khiar, yogurt con cetrioli e menta" loading="lazy"></div>
+          <div class="dish__head"><h3>Mast-o Khiar <span class="tag">estate</span></h3><span class="fa" lang="fa">ماست و خیار</span></div>
+          <p>Yogurt con cetrioli, cipolla, menta e noci.</p>
+        </li>
+      </ul>
+
+      <!-- Piatto unico -->
+      <ul class="dishes" id="p-principali" role="tabpanel" aria-labelledby="tab-principali" data-panel="principali" hidden>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:fesenjan}}" alt="Khoresh Fesenjan con noci e melograno" loading="lazy"></div>
+          <div class="dish__head"><h3>Khoresh Fesenjan</h3><span class="fa" lang="fa">فسنجان</span></div>
+          <p>Riso basmati allo zafferano, pollo, noci e concentrato di melograno.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:morassa-polo}}" alt="Morassa Polo, riso ingioiellato" loading="lazy"></div>
+          <div class="dish__head"><h3>Morassa Polo</h3><span class="fa" lang="fa">مرصع پلو</span></div>
+          <p>Riso, pollo, uvetta, zafferano, mandorle, pistacchio e buccia d'arancia.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:khoresht-karafs}}" alt="Khoresht-e Karafs, stufato di sedano" loading="lazy"></div>
+          <div class="dish__head"><h3>Khoresht-e Karafs</h3><span class="fa" lang="fa">خورش کرفس</span></div>
+          <p>Sedano, carne di vitello, prezzemolo, menta, cipolla e zafferano.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:zereshk-polo}}" alt="Zereshk Polo con pollo e bacche di crespino" loading="lazy"></div>
+          <div class="dish__head"><h3>Zereshk Polo con pollo</h3><span class="fa" lang="fa">زرشک پلو</span></div>
+          <p>Riso basmati allo zafferano, bacche di crispino, pistacchi, mandorle e pollo.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:gheymeh}}" alt="Khoresh Gheymeh con lime secco" loading="lazy"></div>
+          <div class="dish__head"><h3>Khoresh Gheymeh</h3><span class="fa" lang="fa">خورش قیمه</span></div>
+          <p>Riso basmati allo zafferano, carne di vitello, pomodori, cannella, cotiledone e lime.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:chelo-berenj}}" alt="Chelo Berenj con carne di vitello" loading="lazy"></div>
+          <div class="dish__head"><h3>Chelo Berenj</h3><span class="fa" lang="fa">چلو برنج</span></div>
+          <p>Riso basmati allo zafferano, semi di crispino e carne di vitello.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:chelo-morgh}}" alt="Chelo Morgh, riso con coscia di pollo" loading="lazy"></div>
+          <div class="dish__head"><h3>Chelo Morgh</h3><span class="fa" lang="fa">چلو مرغ</span></div>
+          <p>Riso basmati allo zafferano e coscia di pollo.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:chelo-gusht}}" alt="Chelo Gusht, riso con carne di vitello" loading="lazy"></div>
+          <div class="dish__head"><h3>Chelo Gusht</h3><span class="fa" lang="fa">چلو گوشت</span></div>
+          <p>Riso basmati allo zafferano e carne di vitello.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:sabzi-polo-mahi}}" alt="Sabzi Polo con filetto di pesce" loading="lazy"></div>
+          <div class="dish__head"><h3>Sabzi Polo con pesce</h3><span class="fa" lang="fa">سبزی پلو با ماهی</span></div>
+          <p>Riso alle erbe con zafferano, prezzemolo, fieno greco, aglio e filetto di pesce.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:chelo-mahi}}" alt="Chelo Mahi, riso allo zafferano con pesce" loading="lazy"></div>
+          <div class="dish__head"><h3>Chelo Mahi</h3><span class="fa" lang="fa">چلو ماهی</span></div>
+          <p>Riso basmati allo zafferano e filetto di pesce.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:baghali-polo-agnello}}" alt="Baghali Polo con agnello" loading="lazy"></div>
+          <div class="dish__head"><h3>Baghali Polo con agnello</h3><span class="fa" lang="fa">باقالی پلو</span></div>
+          <p>Riso basmati allo zafferano, fave e aneto, con carne di agnello.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:baghali-polo-pollo}}" alt="Baghali Polo con pollo" loading="lazy"></div>
+          <div class="dish__head"><h3>Baghali Polo con pollo</h3><span class="fa" lang="fa">باقالی پلو</span></div>
+          <p>Riso basmati allo zafferano, fave e aneto, con pollo.</p>
+        </li>
+      </ul>
+
+      <!-- Insalate -->
+      <ul class="dishes" id="p-insalate" role="tabpanel" aria-labelledby="tab-insalate" data-panel="insalate" hidden>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:insalata-stagione}}" alt="Insalata di stagione con salsa della casa" loading="lazy"></div>
+          <div class="dish__head"><h3>Insalata di stagione</h3><span class="fa" lang="fa">سالاد فصل</span></div>
+          <p>Insalata di stagione accompagnata da salsa speciale della casa.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:salad-olivieh}}" alt="Salad Olivieh, insalata persiana di patate e pollo" loading="lazy"></div>
+          <div class="dish__head"><h3>Salad Olivieh</h3><span class="fa" lang="fa">سالاد الویه</span></div>
+          <p>Carote, patate, mais, piselli, cetriolini, uova e maionese.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:insalata-cappuccio}}" alt="Insalata di cappuccio con melograno" loading="lazy"></div>
+          <div class="dish__head"><h3>Insalata di cappuccio</h3><span class="fa" lang="fa">سالاد کلم</span></div>
+          <p>Cappuccio bianco, cetriolini, melograno e salsa speciale.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:salad-shirazi}}" alt="Salad Shirazi con cetrioli, pomodori e lime" loading="lazy"></div>
+          <div class="dish__head"><h3>Salad Shirazi</h3><span class="fa" lang="fa">سالاد شیرازی</span></div>
+          <p>Cetrioli, cipolla, pomodori e succo di lime.</p>
+        </li>
+      </ul>
+
+      <!-- Vegetariano -->
+      <ul class="dishes" id="p-vegetariano" role="tabpanel" aria-labelledby="tab-vegetariano" data-panel="vegetariano" hidden>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:loobia-polo}}" alt="Loobia Polo, riso con fagiolini" loading="lazy"></div>
+          <div class="dish__head"><h3>Loobia Polo</h3><span class="fa" lang="fa">لوبیا پلو</span></div>
+          <p>Riso, zafferano, fagiolini, soja, cipolla e salsa di pomodori.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:adas-polo}}" alt="Adas Polo, riso con lenticchie e uvetta" loading="lazy"></div>
+          <div class="dish__head"><h3>Adas Polo</h3><span class="fa" lang="fa">عدس پلو</span></div>
+          <p>Riso, zafferano, lenticchie, uvetta, pistacchi e mandorle.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:gheymeh-veg}}" alt="Gheymeh vegetariano con melanzane" loading="lazy"></div>
+          <div class="dish__head"><h3>Gheymeh <span class="tag">veg</span></h3><span class="fa" lang="fa">قیمه</span></div>
+          <p>Riso, zafferano, lime, cotiledone, melanzane e pomodori.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:fesenjan-veg}}" alt="Fesenjan vegetariano con noci e melograno" loading="lazy"></div>
+          <div class="dish__head"><h3>Fesenjan <span class="tag">veg</span></h3><span class="fa" lang="fa">فسنجان</span></div>
+          <p>Riso, zafferano, noci, concentrato di melograno e melanzane.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:baghali-polo-veg}}" alt="Baghali Polo vegetariano con fave e aneto" loading="lazy"></div>
+          <div class="dish__head"><h3>Baghali Polo <span class="tag">veg</span></h3><span class="fa" lang="fa">باقالی پلو</span></div>
+          <p>Riso, zafferano, fave, aneto e soja.</p>
+        </li>
+      </ul>
+
+      <!-- Dolci -->
+      <ul class="dishes" id="p-dolci" role="tabpanel" aria-labelledby="tab-dolci" data-panel="dolci" hidden>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:sholezard}}" alt="Sholezard, budino di riso allo zafferano" loading="lazy"></div>
+          <div class="dish__head"><h3>Sholezard</h3><span class="fa" lang="fa">شله‌زرد</span></div>
+          <p>Budino di riso, burro, zafferano, acqua di rosa, cardamomo, mandorle e pistacchio.</p>
+        </li>
+        <li class="dish">
+          <div class="dish__img"><img src="{{PHOTO:dolcetti}}" alt="Dolcetti persiani fatti in casa" loading="lazy"></div>
+          <div class="dish__head"><h3>Dolcetti persiani</h3><span class="fa" lang="fa">شیرینی</span></div>
+          <p>I dolcetti tradizionali fatti in casa, appena sfornati.</p>
+        </li>
+        <li class="dish dish--noimg">
+          <div class="dish__img"><span>Torta della casa</span></div>
+          <div class="dish__head"><h3>Torta della casa</h3></div>
+          <p>Una porzione di torta alle noci, alle carote oppure al cacao.</p>
+        </li>
+        <li class="dish dish--noimg">
+          <div class="dish__img"><span>Cheesecake</span></div>
+          <div class="dish__head"><h3>Cheesecake</h3></div>
+          <p>Una porzione di cheesecake al limone, cioccolata, fragole oppure melograno.</p>
+        </li>
+      </ul>
+
+      <div class="incluso">
+        <h3>Sempre incluso nel menu fisso</h3>
+        <p>Dolcetti tipici artigianali con tè caldo nel menu invernale, o sharbat — la bevanda fresca della tradizione — nel menu estivo. Disponibili anche acqua naturale e frizzante e bevande in lattina.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESPERIENZA ============ -->
+  <section class="esperienza band" id="esperienza">
+    <div class="shell">
+      <p class="label">La sera da Persian Home</p>
+      <h2>Quattro cose che troverete in tavola oltre al cibo</h2>
+      <div class="tratti">
+        <div class="tratto">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 11h14l-1.4 15a2.6 2.6 0 0 1-2.6 2.4h-6a2.6 2.6 0 0 1-2.6-2.4z"/><path d="M22 14.5c4 0 4 6.5 0 6.5"/><path d="M11.5 8c0-2 1.5-2 1.5-4M16 8c0-2 1.5-2 1.5-4"/></svg>
+          <h3>Il tè di benvenuto</h3>
+          <p>Ogni serata comincia con un tè caldo servito nei bicchierini estekan, come in ogni casa persiana.</p>
+        </div>
+        <div class="tratto">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c3 3.5 5 6.5 5 9.5a5 5 0 0 1-10 0C11 10.5 13 7.5 16 4z"/><path d="M6 22c3.5 2.5 6.5 3.5 10 3.5s6.5-1 10-3.5"/><path d="M9 27c2.5 1.3 4.7 2 7 2s4.5-.7 7-2"/></svg>
+          <h3>Zafferano vero</h3>
+          <p>Il colore del riso non viene da un colorante: è zafferano in pistilli, sciolto a mano prima del servizio.</p>
+        </div>
+        <div class="tratto">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="10" cy="24" r="3.5"/><circle cx="23" cy="21" r="3.5"/><path d="M13.5 24V8l13-3v16"/></svg>
+          <h3>Musica persiana</h3>
+          <p>Melodie tradizionali in sottofondo, a volume da conversazione: si viene qui anche per parlare.</p>
+        </div>
+        <div class="tratto">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l3.4 4.9 5.8-1.4-1.4 5.8L28.7 16l-4.9 3.4 1.4 5.8-5.8-1.4L16 28.7l-3.4-4.9-5.8 1.4 1.4-5.8L3.3 16l4.9-3.4-1.4-5.8 5.8 1.4z"/><circle cx="16" cy="16" r="4"/></svg>
+          <h3>Pochi tavoli</h3>
+          <p>Cuciniamo solo per chi ha prenotato. Nessuna fretta, nessun turno: la sala è vostra fino alla fine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VOCI ============ -->
+  <section class="voci band">
+    <div class="shell voci__grid">
+      <div class="punteggi">
+        <p class="label">Gli ospiti</p>
+        <div class="punteggio">
+          <strong>4,9<small>/5</small></strong>
+          <span>Restaurant Guru &middot; 64 recensioni</span>
+        </div>
+        <div class="punteggio">
+          <strong>5,0<small>/5</small></strong>
+          <span>Media recensioni Google</span>
+        </div>
+      </div>
+      <blockquote class="citazione">
+        <p>&ldquo;Un posto molto carino e intimo, con un'accoglienza super amichevole da parte della proprietaria. È stata un'esperienza fantastica assaggiare per la prima volta la cucina persiana: non vediamo l'ora di tornare.&rdquo;</p>
+        <footer>Recensione su <a href="https://restaurantguru.com/PERSIAN-HOME-Montebelluna" target="_blank" rel="noopener">Restaurant Guru</a>, tradotta dall'inglese</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ PRENOTA ============ -->
+  <section class="prenota band" id="prenota">
+    <div class="shell prenota__grid">
+      <div>
+        <p class="label">Prenotazioni</p>
+        <h2>Riservate la vostra sera</h2>
+        <p class="prenota__intro">La prenotazione è <strong>obbligatoria, con almeno un giorno di anticipo</strong>: la spesa e la cucina si fanno su misura per gli ospiti della serata. Il modo più veloce per avere conferma è scriverci su WhatsApp.</p>
+        <div class="diretto">
+          <a href="https://wa.me/393715783119">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4z"/><path d="M8.6 9.2c.3 2.6 3.6 5.9 6.2 6.2l1.2-1.5 2 1.1-.6 1.6c-2.6.8-7.8-3.1-9-6.4l1.5-.9z"/></svg>
+            371 578 3119
+          </a>
+          <a href="https://wa.me/393713536664">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4z"/><path d="M8.6 9.2c.3 2.6 3.6 5.9 6.2 6.2l1.2-1.5 2 1.1-.6 1.6c-2.6.8-7.8-3.1-9-6.4l1.5-.9z"/></svg>
+            371 353 6664
+          </a>
+          <a href="tel:+393715783119">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l1.6 4-2 1.4a12 12 0 0 0 6 6l1.4-2 4 1.6v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4 5.2 2 2 0 0 1 6 3z"/></svg>
+            Oppure chiamateci
+          </a>
+        </div>
+      </div>
+
+      <form class="form" id="modulo" novalidate>
+        <div class="form__row">
+          <label class="field" for="f-nome"><span>Nome</span><input id="f-nome" name="nome" type="text" autocomplete="name" required></label>
+          <label class="field" for="f-tel"><span>Telefono</span><input id="f-tel" name="telefono" type="tel" autocomplete="tel" required></label>
+        </div>
+        <div class="form__row">
+          <label class="field" for="f-data"><span>Data</span><input id="f-data" name="data" type="date" required></label>
+          <label class="field" for="f-ora"><span>Ora</span><input id="f-ora" name="ora" type="time" required></label>
+        </div>
+        <label class="field" for="f-persone"><span>Persone</span><input id="f-persone" name="persone" type="number" min="1" max="20" inputmode="numeric" required></label>
+        <label class="field" for="f-note"><span>Note <small>— allergie, occasioni speciali</small></span><textarea id="f-note" name="note" rows="3"></textarea></label>
+        <button class="btn btn--primary" type="submit">Invia la richiesta</button>
+        <p class="form__note" id="esito" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTI ============ -->
+  <section class="contatti band" id="contatti">
+    <div class="shell">
+      <p class="label">Dove siamo</p>
+      <h2>Via Alcide De Gasperi 2/11, Montebelluna</h2>
+      <div class="contatti__grid">
+        <ul class="dati">
+          <li><strong>Indirizzo</strong><span>Via Alcide De Gasperi, 2/11<br>31044 Montebelluna (TV)</span></li>
+          <li><strong>Orari</strong><span>Tutti i giorni, fino alle 23:00</span></li>
+          <li><strong>Telefono</strong><span><a href="tel:+393715783119">+39 371 578 3119</a></span></li>
+          <li><strong>WhatsApp</strong><span><a href="https://wa.me/393715783119">371 578 3119</a> &middot; <a href="https://wa.me/393713536664">371 353 6664</a></span></li>
+          <li><strong>Titolari</strong><span>Parvaneh e Hosein</span></li>
+        </ul>
+
+        <a class="mappa" href="https://www.google.com/maps?q=Via%20Alcide%20De%20Gasperi%2C%202%2F11%2C%2031044%20Montebelluna%20TV%2C%20Italia" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <strong>Apri la mappa</strong>
+          <span>Via Alcide De Gasperi 2/11 — 31044 Montebelluna (TV)</span>
+          <em>Google Maps →</em>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="piede">
+  <div class="shell piede__inner">
+    <span>© <span id="anno"></span> Ristorante Persian Home — Montebelluna (TV)</span>
+    <span>Sito dimostrativo creato a scopo di test.</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('anno').textContent = new Date().getFullYear();
+
+/* --- navigazione mobile --- */
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+
+function chiudiNav() {
+  nav.classList.remove('nav--open');
+  burger.setAttribute('aria-expanded', 'false');
+}
+
+burger.addEventListener('click', () => {
+  const aperto = nav.classList.toggle('nav--open');
+  burger.setAttribute('aria-expanded', String(aperto));
+});
+nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', chiudiNav));
+window.matchMedia('(max-width: 720px)').addEventListener('change', chiudiNav);
+
+/* --- schede del menu --- */
+const tabs = Array.from(document.querySelectorAll('.tab'));
+const panels = Array.from(document.querySelectorAll('.dishes'));
+
+function mostra(nome) {
+  tabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === nome)));
+  panels.forEach((p) => { p.hidden = p.dataset.panel !== nome; });
+}
+
+tabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => mostra(tab.dataset.tab));
+  tab.addEventListener('keydown', (e) => {
+    const passo = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (!passo) return;
+    e.preventDefault();
+    const next = tabs[(i + passo + tabs.length) % tabs.length];
+    next.focus();
+    mostra(next.dataset.tab);
+  });
+});
+
+/* --- richiesta di prenotazione (dimostrativa) --- */
+const modulo = document.getElementById('modulo');
+const esito = document.getElementById('esito');
+
+modulo.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const mancante = Array.from(modulo.querySelectorAll('[required]')).find((c) => !c.value.trim());
+  if (mancante) {
+    esito.textContent = 'Compilate ' + mancante.closest('.field').querySelector('span').textContent.split('—')[0].trim().toLowerCase() + ' per inviare la richiesta.';
+    mancante.focus();
+    return;
+  }
+  esito.textContent = 'Grazie! Richiesta registrata — su questo sito dimostrativo nessun dato viene inviato. Per una conferma reale scriveteci su WhatsApp.';
+  modulo.reset();
+});
+</script>
