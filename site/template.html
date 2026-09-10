@@ -571,6 +571,7 @@ p { margin: 0; }
   text-wrap: balance;
 }
 .citazione footer { font-size: 0.86rem; color: var(--linen-dim); }
+.citazione__nota { font-style: italic; }
 .citazione footer a { color: var(--saffron); }
 
 /* ---- prenotazioni ---------------------------------------- */
@@ -1181,20 +1182,24 @@ p { margin: 0; }
   </section>
 
   <!-- ============ VOCI ============ -->
-  <section class="voci band--tight" id="recensioni">
+  <section class="voci band" id="recensioni">
     <div class="shell voci__grid">
-      <div>
+      <div class="punteggi">
         <h2 class="label">Gli ospiti</h2>
-        <p class="voci__invito">Il racconto più utile a chi non è ancora venuto lo scrivete voi. Se siete stati da noi, bastano due righe.</p>
-      </div>
-      <div class="voci__azione">
+        <div class="punteggio">
+          <strong>4,9<small>/5</small></strong>
+          <span>Restaurant Guru &middot; 64 recensioni</span>
+        </div>
         <a class="btn btn--ghost recensione" target="_blank" rel="noopener"
            href="https://www.google.com/maps/search/?api=1&amp;query=Persian%20Home%20Via%20Alcide%20De%20Gasperi%20Montebelluna">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/></svg>
-          Lasciaci una recensione su Google
+          Lasciaci una recensione
         </a>
-        <p class="voci__nota">Si apre la nostra scheda Google, dove trovate anche le recensioni già pubblicate.</p>
       </div>
+      <blockquote class="citazione">
+        <p>&ldquo;Un posto molto carino e intimo, con un'accoglienza super amichevole da parte della proprietaria! Per noi era la prima volta con la cucina persiana e dobbiamo dire che &egrave; stata un'esperienza fantastica.&rdquo;</p>
+        <footer>Recensione pubblicata su <a href="https://restaurantguru.com/PERSIAN-HOME-Montebelluna" target="_blank" rel="noopener">Restaurant Guru</a> <span class="citazione__nota">&mdash; tradotta dall'inglese</span></footer>
+      </blockquote>
     </div>
   </section>
 
